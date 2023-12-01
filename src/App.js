@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+
 const PlayerPropsComponent = () => {
     const [playerPropsData, setPlayerPropsData] = useState({});
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const api_key = "qL5t9Y2h2Pli9L4sldqZM5L9IE2XitiyP75F2AtoRY"; // Replace with your actual API key
     const date = "2023-03-07"; //Date we are Querying
+
 
     useEffect(() => {
         const fetchPlayerProps = async () => {
