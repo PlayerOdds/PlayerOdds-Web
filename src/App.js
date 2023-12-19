@@ -118,10 +118,24 @@ const App = () => {
 
   return (
     <div>
-      {/* Render your player data here */}
-      <pre>{JSON.stringify(playerData, null, 2)}</pre>
+      {loading && <div>Loading...</div>}
+      {error && <div>Error: {error.message}</div>}
+      {playerData && Array.isArray(playerData) && (
+        <div>
+          <h1>Player Props</h1>
+          {playerData.map((item, index) => (
+            <div key={index} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
+              <p style={{ marginRight: '15px' }}>Prop Name: {item.prop_name}</p>
+              <p>Odds: {item.odds}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
+  
+  
+  
 };
 
 export default App;
