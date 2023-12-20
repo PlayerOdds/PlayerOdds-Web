@@ -1,5 +1,4 @@
 import React from 'react';
-import fanduelLogo from '../images/Fanduel_Shield_2022.png';
 import TableHeader from './TableHeader';
 import TableRow from './TableRow';
 
