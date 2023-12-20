@@ -1,6 +1,4 @@
 import React from 'react';
-import { DraftKingsLogo, Bovada, FanDuel } from '../images/ImageRepository.js';
-
 
 const TableRow = ({ item }) => {
   const tdStyle = { padding: '8px', border: '1px solid #ddd', textAlign: 'center' };
