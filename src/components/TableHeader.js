@@ -1,9 +1,4 @@
-// SomeOtherFile.js
 import { DraftKingsLogo, BetMGM, FanDuel, Pinnacle, Barstool } from '../images/ImageRepository.js';
-
-// Now you can use these images as required in your component or function
-
-
 
 const TableHeader = () => {
   const headerStyle = { backgroundColor: '#f2f2f2', color: 'black', padding: '10px', border: '1px solid #ddd' };
