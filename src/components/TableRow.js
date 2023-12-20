@@ -15,7 +15,7 @@ console.log(item)
       <td style={tdStyle}>{item.handicap}</td>
       <td style={tdStyle}>{item.odds}</td>
       <td style={tdStyle}>{item.prop_name}</td>
-      <td style={tdStyle}>{item.prop_description}</td>
+      <td style={tdStyle}>{item.odds}</td>
       {/* <td style={tdStyle}>{item.market_key}</td> */}
     </tr>
   );
