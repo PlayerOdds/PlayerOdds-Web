@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import logoImage from '../images/content/Playerodds_banner.jpg';
+import logoImage from '../images/content/oddsalert_banner1.jpg';
 
 const Navbar = styled.nav`
-    background-color: #333;
+    background-color: #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
-    height: 64px;
+    padding: 0 20px; // Increased padding
+    height: 100px; // Increased height
 `;
 
 const NavLinks = styled.ul`
@@ -19,21 +19,22 @@ const NavLinks = styled.ul`
 `;
 
 const NavItem = styled.li`
-    font-size: 20px;
+    font-size: 250px;
+    display: flex;
     padding: 12px 16px;
     border-radius: 5px;
 `;
 
 const NavLink = styled.a`
     display: block;
-    color: white;
+    color: white; // Default color
     text-align: center;
     text-decoration: none;
-    padding: 4px 16px;
+    padding: 5px 16px;
     position: relative;
     overflow: hidden;
-    font-size: 18px;
-    border-radius: 5px; // Adjust for roundness of each nav link
+    font-size: 25px;
+    border-radius: 5px;
 
     &:after {
         content: '';
@@ -41,9 +42,13 @@ const NavLink = styled.a`
         bottom: 0;
         left: 0;
         width: 0;
-        height: 2px;
-        background-color: white;
+        height: 4px;
+        background-color: #17D475;
         transition: width 0.3s ease;
+    }
+
+    &:hover {
+        color: #17D475; // Color change on hover
     }
 
     &:hover:after {
@@ -52,19 +57,30 @@ const NavLink = styled.a`
 `;
 
 const Logo = styled.img`
-    height: 50px;
-    margin-right: 10px;
+    height: 100px; // Increased logo size
+    
 `;
+
+const LogoContainer = styled.div`
+    display: flex;
+    align-items: center;
+    margin-left: 0px;
+`;
+
+
 
 const NavBar = () => {
     return (
         <Navbar>
-            <Logo src={logoImage} alt="Logo" />
+            <LogoContainer>
+                <Logo src={logoImage} alt="Logo" />
+                
+            </LogoContainer>
             <NavLinks>
                 <NavItem><NavLink href="/">Home</NavLink></NavItem>
                 <NavItem><NavLink href="/about">About</NavLink></NavItem>
-                <NavItem><NavLink href="/services">Services</NavLink></NavItem>
-                <NavItem><NavLink href="/contact">Contact</NavLink></NavItem>
+                <NavItem><NavLink href="/services">Tools</NavLink></NavItem>
+                <NavItem><NavLink href="/contact">Pricing</NavLink></NavItem>
             </NavLinks>
         </Navbar>
     );
