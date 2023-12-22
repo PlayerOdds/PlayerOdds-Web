@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { getPlayerData } from './components/getPlayerData'; // Ensure this path is correct
-import DataDisplay from './components/datadisplay'; // Import the DataDisplay component
+import NavBar from './components/NavBar'; // Adjust the path if NavBar is in a different directory
+import { getPlayerData } from './components/getPlayerData';
+import DataDisplay from './components/datadisplay';
 
 const App = () => {
   const [playerData, setPlayerData] = useState(null);
@@ -29,6 +30,7 @@ const App = () => {
 
   return (
     <div>
+      <NavBar /> {/* NavBar component included here */}
       <h1>Player Props</h1>
       {playerData && <DataDisplay data={playerData} />}
     </div>
