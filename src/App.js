@@ -2,39 +2,32 @@ import React, { useEffect, useState } from 'react';
 import NavBar from './components/NavBar'; // Adjust the path if NavBar is in a different directory
 import { getPlayerData } from './components/getPlayerData';
 import DataDisplay from './components/datadisplay';
+import LoginButton from './components/LoginButton';
+import LogoutButton from './components/LogoutButton';
+import Profile from './components/Profile';
+import { useAuth0 } from '@auth0/auth0-react';
 
-const App = () => {
-  const [playerData, setPlayerData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      try {
-        const data = await getPlayerData();
-        setPlayerData(data);
-      } catch (error) {
-        console.error('Error fetching player data:', error);
-        setError(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
+function App () {
+  const {isLoading, error } = useAuth0();
 
   return (
-    <div>
-      <NavBar /> {/* NavBar component included here */}
-      <h1>Player Props</h1>
-      {playerData && <DataDisplay data={playerData} />}
-    </div>
+    <main className="column">
+      <h1>Auth0 Login</h1>
+      {error && <p>Authentication Error</p>}
+      {!error && isLoading && <p>Loading...</p>}
+      {!error && !isLoading && (
+        <>
+        <LoginButton/>
+        <LogoutButton/>
+        <Profile/>
+        </>
+      )}
+    
+    </main>
+
   );
 };
 
 export default App;
+
+
