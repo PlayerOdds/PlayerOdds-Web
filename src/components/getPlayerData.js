@@ -1,4 +1,4 @@
-const apiUrl = 'https://f2cdr7zot5.execute-api.us-east-1.amazonaws.com/default/pull_all_fanduel_data';
+const apiUrl = 'https://f2cdr7zot5.execute-api.us-east-1.amazonaws.com/default/NFL-Data-pull-to-front';
 
 // Fetch data using native Fetch API
 export const getPlayerData = async () => {
