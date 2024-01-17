@@ -1,29 +1,32 @@
 import React, { useEffect, useState } from 'react';
-import NavBar from './components/NavBar'; // Adjust the path if NavBar is in a different directory
-import { getPlayerData } from './components/getPlayerData';
-import DataDisplay from './components/datadisplay';
+
 import LoginButton from './components/LoginButton';
 import LogoutButton from './components/LogoutButton';
 import Profile from './components/Profile';
 import { useAuth0 } from '@auth0/auth0-react';
+import TWNavBar from './components/TWNavBar';
+import HomeScreen from './components/HomeScreen';
 
 function App () {
   const {isLoading, error } = useAuth0();
 
   return (
-    <main className="column">
-      <h1>Auth0 Login</h1>
+    <div>
+      <TWNavBar/>
+      <HomeScreen/>
+        
       {error && <p>Authentication Error</p>}
       {!error && isLoading && <p>Loading...</p>}
       {!error && !isLoading && (
         <>
-        <LoginButton/>
-        <LogoutButton/>
-        <Profile/>
+      
+
+        {/*<LogoutButton/>
+        <Profile/>*/}
         </>
       )}
     
-    </main>
+    </div>
 
   );
 };

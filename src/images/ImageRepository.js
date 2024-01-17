@@ -4,6 +4,7 @@ import FanDuel from './content/Fanduel_Shield_2022.png';
 import BetMGM from './content/betmgm.webp'
 import Pinnacle from './content/Pinnacle.webp'
 import Barstool from './content/Barstool.png'
+import MenuIcon from './content/main-menu.png'
 
 export {
   DraftKingsLogo,
@@ -12,5 +13,6 @@ export {
   BetMGM,
   Pinnacle,
   Barstool,
+  MenuIcon,
 
  };
