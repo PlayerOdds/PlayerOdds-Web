@@ -30,7 +30,7 @@ const TWNavBar = () => {
             <div className='md:px-3 py-1 px-3 md:flex justify-between items-center
             bg-transparent'>
                 <div class='flex text-2xl cursor-pointer items-center gap-2'>
-                    <img src={LogoBanner} alt ='OddsAlert' onClick='../HomePage/HomePage.js' className='transiton object-scale-down h-20 w-auto hover:scale-105'/>
+                    <img src={LogoBanner} alt ='OddsAlert' className='transiton object-scale-down h-20 w-auto hover:scale-105'/>
                 </div>
                 
                 <div onClick={() => setisOpen(!isOpen)} className='w-5 h-5 absolute right-8 top-8 cursor-pointer md:hidden'>
