@@ -7,6 +7,7 @@ import { Routes, Route } from 'react-router-dom';
 import Pricing from '../screens/Pricing/pricing'
 
 
+
 const HomePage = () => {
     return (
         <div>
