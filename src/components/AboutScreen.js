@@ -5,7 +5,7 @@ import Data from '../images/content/datapoint.png';
 
 const AboutScreen = () => {
     return (
-        <div className='md:px-5 p-4 pt-36 max-w-screen-2xl mx-auto mt-100'>
+        <div className='md:px-5 p-4 pt-16 max-w-screen-2xl mx-auto mt-100'>
             <div className='flex flex-col lg:flex-row justify-between items-start gap-10'>
                 <div className="lg:w-1/3 pl-10 ">
                     <h2 className='text-white pt-10 pb-2 text-4xl font-bold text-custom-darkpurple'>What makes OddsAlert Great?</h2>

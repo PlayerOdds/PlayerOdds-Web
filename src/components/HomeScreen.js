@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from "react";
-import Pat from '../images/content/hurt_pat.png'
+import React from 'react';
+import Pat from '../images/content/hurt_pat.png';
 import ScrollBar from "./ScrollBar";
 import AboutScreen from '../components/AboutScreen';
 
-
 const HomeScreen = () => {
     return (
-        <div className=' bg-md:px-5 p-4 max-w-screen-2xl mx-auto mt-100'>
+        <div className='bg-md:px-5 p-4 max-w-screen-2xl mx-auto mt-100'>
             <div>
                 <div className='flex flex-col md:flex-row justify-between items-center gap-10'>
                     {/* Container for Heading and Paragraph */}
                     <div className='md:w-3/5 flex flex-col justify-center'>
-                        {/* Heading */}
-                        <h2 className='text-center text-2xl md:text-6xl font-bold text-white mb-6 leading-tight md:leading-normal'>
+                        {/* Modified Heading */}
+                        <h2 className='text-center text-6xl sm:text-7xl md:text-6xl font-bold text-white mb-6 leading-tight md:leading-normal'>
                             Giving you the <span className='text-[#17D475]'>Beneficial Edge.</span>
                         </h2>
                         {/* Paragraph */}
@@ -30,7 +29,6 @@ const HomeScreen = () => {
             <AboutScreen/>
             <ScrollBar/>
         </div>
-        
     )
 }
 
