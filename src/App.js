@@ -9,6 +9,7 @@ import HomeScreen from './components/HomeScreen';
 import AboutScreen from './components/AboutScreen';
 import ScrollBar from './components/ScrollBar';
 import Pricing from './components/Pricing';
+import HomePage from './HomePage/HomePage';
 
 function App () {
   const {isLoading, error } = useAuth0();
@@ -16,10 +17,8 @@ function App () {
   return (
     <div>
       <TWNavBar/>
-      <HomeScreen/>
-      <AboutScreen/>
-      <ScrollBar/>
       <Pricing/>
+      
         
       {error && <p>Authentication Error</p>}
       {!error && isLoading && <p>Loading...</p>}
