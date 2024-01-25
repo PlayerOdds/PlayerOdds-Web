@@ -3,14 +3,15 @@ import LogoBanner from '../images/content/oddsalert_banner1_transparent.png';
 import MenuIcon from '../images/content/main-menu.png';
 import ExitIcon from '../images/content/close.png';
 import TWLoginButton from "./TWLoginButton";
+import { Link } from 'react-router-dom';
 
 
 const TWNavBar = () => {
     let Links=[
-        {name:'DFS Optimizer',link:'/DFS'},
-        {name:'Pricing',link:'/'},
-        {name:'Contact',link:'/'},
-    ]
+        {name: 'DFS Optimizer', link: '/DFS'}, // Update these links to your desired paths
+        {name: 'Pricing', link: '/pricing'},
+        {name: 'Contact', link: '/contact'},
+    ];
 
     let [isOpen, setisOpen] = useState(false);
     let [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -30,7 +31,9 @@ const TWNavBar = () => {
             <div className='md:px-3 py-1 px-3 md:flex justify-between items-center
             bg-transparent'>
                 <div class='flex text-2xl cursor-pointer items-center gap-2'>
-                    <img src={LogoBanner} alt ='OddsAlert' className='transiton object-scale-down h-20 w-auto hover:scale-105'/>
+                <Link to="/">
+                        <img src={LogoBanner} alt='OddsAlert' className='transition object-scale-down h-20 w-auto hover:scale-105'/>
+                    </Link>
                 </div>
                 
                 <div onClick={() => setisOpen(!isOpen)} className='w-5 h-5 absolute right-8 top-8 cursor-pointer md:hidden'>
@@ -47,9 +50,10 @@ const TWNavBar = () => {
                     {/** Need to find a Solution for the drop down menu if this design is awesome enough */}
                     {
                         Links.map(link => (
-                        <li className='transition font-semibold my-7 md:my-0 md:ml-8 mr-4 hover:scale-105 hover:text-[#17D475]'>
-                            <a href='/'>{link.name}</a>
-                        </li>))
+                            <li key={link.name} className='transition font-semibold my-7 md:my-0 md:ml-8 mr-4 hover:scale-105 hover:text-[#17D475]'>
+                                <Link to={link.link}>{link.name}</Link> {/* Use Link component here */}
+                            </li>
+                        ))
                     }
                     <TWLoginButton/>
                 </ul>

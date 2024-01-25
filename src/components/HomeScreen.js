@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Pat from '../images/content/hurt_pat.png'
-
+import ScrollBar from "./ScrollBar";
+import AboutScreen from '../components/AboutScreen';
 
 
 const HomeScreen = () => {
@@ -26,7 +27,10 @@ const HomeScreen = () => {
                     </div>
                 </div>
             </div>
+            <AboutScreen/>
+            <ScrollBar/>
         </div>
+        
     )
 }
 

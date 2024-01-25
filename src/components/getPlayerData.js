@@ -1,3 +1,5 @@
+//TO DO MOVE TO EVIORMENTAL VARIABLES
+
 const apiUrl = 'https://f2cdr7zot5.execute-api.us-east-1.amazonaws.com/default/NFL-Data-pull-to-front';
 
 // Fetch data using native Fetch API

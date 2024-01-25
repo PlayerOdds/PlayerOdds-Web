@@ -1,6 +1,6 @@
 import React from "react";
-import checkMarkImage from '../images/content/check-mark.png'
-
+import {CheckMark} from '../../images/ImageRepository'
+ 
 const pricingPlans = [
     {
         plan: "Monthly",
@@ -8,8 +8,6 @@ const pricingPlans = [
         includes: [
             "Access to Discord Server",
             "DFS Optimizer",
-            
-            // ... more services for Monthly plan
         ],
     },
     {
@@ -19,8 +17,6 @@ const pricingPlans = [
             "Access to Discord Server",
             "DFS Optimizer",
             "Access to Premium Discord",
-            
-            // ... more services for Semi-Annual plan
         ],
     },
     {
@@ -31,10 +27,8 @@ const pricingPlans = [
             "DFS Optimizer",
             "Access to Premium Discord",
             "My Personal Picks 2x / Week",
-            // ... more services for Annual plan
         ],
     },
-    // Add more plans if needed
 ];
 
 const Pricing = () => {
@@ -84,7 +78,7 @@ const Pricing = () => {
                                 </div>
                                 {plan.includes.map((include, includeIndex) => (
                                     <div key={includeIndex} className="text-white text-lg mb-2 self-start flex items-center">
-                                        <img src={checkMarkImage} alt="Check Mark" className="mr-2" style={{ width: '20px', height: '20px' }} />
+                                        <img src={CheckMark} alt="Check Mark" className="mr-2" style={{ width: '20px', height: '20px' }} />
                                         {include}
                                     </div>
                                 ))}

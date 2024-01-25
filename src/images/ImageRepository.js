@@ -5,6 +5,7 @@ import BetMGM from './content/betmgm.webp'
 import Pinnacle from './content/Pinnacle.webp'
 import Barstool from './content/Barstool.png'
 import MenuIcon from './content/main-menu.png'
+import CheckMark from './content/check-mark.png'
 
 export {
   DraftKingsLogo,
@@ -14,5 +15,5 @@ export {
   Pinnacle,
   Barstool,
   MenuIcon,
-
+  CheckMark
  };
