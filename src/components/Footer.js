@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import LogoBanner from '../images/content/oddsalert_banner1_transparent.png';
 import MenuIcon from '../images/content/main-menu.png';
 import ExitIcon from '../images/content/close.png';
-import TWLoginButton from "./TWLoginButton";
 
 
-const TWNavBar = () => {
+
+const Footer = () => {
     let Links=[
         {name:'DFS Optimizer',link:'/'},
         {name:'Pricing',link:'/'},
@@ -51,7 +51,7 @@ const TWNavBar = () => {
                             <a href='/'>{link.name}</a>
                         </li>))
                     }
-                    <TWLoginButton/>
+                    
                 </ul>
             </div>
         </header>

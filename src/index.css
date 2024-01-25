@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 body {
+  background: radial-gradient(circle at center, #31333f, #000300); /* Radial gradient from #31333f to #000300 */
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -14,4 +15,24 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-50%); /* Since we doubled the list, we move by -50% */
+  }
+}
+
+.animate-scroll {
+  animation: scroll 12s linear infinite;
+  display: inline-flex;
+}
+.custom-image-container img {
+  height: 8rem; /* Fixed height */
+  width: auto; /* Fixed width to match the height, ensures a square shape */
+  object-fit: cover; /* Ensures the image covers the area without stretching. If part of the image can be cropped, use 'cover' */
+  border-radius: 0.5rem; /* Optional: Adds rounded corners */
 }
