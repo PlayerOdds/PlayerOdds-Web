@@ -5,7 +5,7 @@ import Pat from '../images/content/hurt_pat.png'
 
 const HomeScreen = () => {
     return (
-        <div className='bg-md:px-5 p-4 max-w-screen-2xl mx-auto mt-100'>
+        <div className=' bg-md:px-5 p-4 max-w-screen-2xl mx-auto mt-100'>
             <div>
                 <div className='flex flex-col md:flex-row justify-between items-center gap-10'>
                     {/* Container for Heading and Paragraph */}

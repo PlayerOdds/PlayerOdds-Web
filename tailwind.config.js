@@ -15,7 +15,7 @@ module.exports = {
       },
       backgroundImage: {
         'emerald-gradient': 'linear-gradient(to right, #0C6A3A, #033A0F)',
-        'dg-gradient': 'linear-gradient(to right, #31333f, #000300)',
+        'dg-gradient': 'linear-gradient(to right, #0C6A3A, #000300)',
         'radial-at-center': 'radial-gradient(circle at center, var(--tw-gradient-stops))',
       
       },
