@@ -34,7 +34,7 @@ const pricingPlans = [
             // ... more services for Annual plan
         ],
     },
-    // Add more plans if needed
+
 ];
 
 const Pricing = () => {
