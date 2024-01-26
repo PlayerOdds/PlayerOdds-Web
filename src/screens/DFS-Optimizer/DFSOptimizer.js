@@ -79,7 +79,13 @@ export default function BasicTable() {
       <Autocomplete
         options={playerNames}
         style={{ width: 200, marginBottom: '20px', marginLeft: '20px', background:'#1D2C36', color:'white,'}}
-        renderInput={(params) => <TextField {...params} label="Filter by Team" />}
+        renderInput={(params) => 
+          <TextField {...params}
+          label="Filter by Player"
+          InputLabelProps={{
+            style: { color: 'white' },
+          }}
+           />}
         value={selectedPlayer}
         onChange={(event, newValue) => {
           setSelectedPlayer(newValue);
@@ -88,7 +94,13 @@ export default function BasicTable() {
       <Autocomplete
         options={playerNames}
         style={{ width: 200, marginBottom: '20px',marginLeft: '20px', background:'#1D2C36',}}
-        renderInput={(params) => <TextField {...params} label="Filter by Player" />}
+        renderInput={(params) => 
+          <TextField {...params}
+          label="Filter by Sport"
+          InputLabelProps={{
+            style: { color: 'white' },
+          }}
+           />}
         value={selectedPlayer}
         onChange={(event, newValue) => {
           setSelectedPlayer(newValue);
@@ -97,16 +109,28 @@ export default function BasicTable() {
       <Autocomplete
         options={playerNames}
         style={{ width: 200, marginBottom: '20px',marginLeft: '20px', background:'#1D2C36',}}
-        renderInput={(params) => <TextField {...params} label="Filter by Book"
+        renderInput={(params) => 
+          <TextField {...params}
+          label="Filter by Stat Type"
+          InputLabelProps={{
+            style: { color: 'white' },
+          }}
+           />}
         value={selectedPlayer}
         onChange={(event, newValue) => {
           setSelectedPlayer(newValue);
-        }} />}
+        }}
       />
       <Autocomplete
         options={playerNames}
         style={{ width: 200, marginBottom: '20px', marginLeft: '20px', background:'#1D2C36',}}
-        renderInput={(params) => <TextField {...params} label="Filter by Player" />}
+        renderInput={(params) => 
+          <TextField {...params}
+          label="+EV Plays"
+          InputLabelProps={{
+            style: { color: 'white' },
+          }}
+           />}
         value={selectedPlayer}
         onChange={(event, newValue) => {
           setSelectedPlayer(newValue);
