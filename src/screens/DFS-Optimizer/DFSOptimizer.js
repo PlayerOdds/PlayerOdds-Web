@@ -24,6 +24,10 @@ const rows = [
   createData('Luka Doncic', 'Total Points', 'Over',31.5, 30.5, '54.36%', -157, -156, -124, -143, -123, -154),
   createData('Anyhony Edwards', 'Points + Ast', 'Under', 39.5, 39.5, '54.36%', -157, -156, -124, -143, -123, -154),
   createData('Lamar Jackson', 'Rushing Yards', 'Over', 76.5, 76.5, '53.36%', -157, -156, -124, -143, -123, -154),
+  createData('Lamar Jackson', 'Rushing Yards', 'Over', 76.5, 76.5, '53.36%', -157, -156, -124, -143, -123, -154),
+  createData('Lamar Jackson', 'Rushing Yards', 'Over', 76.5, 76.5, '53.36%', -157, -156, -124, -143, -123, -154),
+  createData('Lamar Jackson', 'Rushing Yards', 'Over', 76.5, 76.5, '53.36%', -157, -156, -124, -143, -123, -154),
+  createData('Lamar Jackson', 'Rushing Yards', 'Over', 76.5, 76.5, '53.36%', -157, -156, -124, -143, -123, -154),
 ];
 
 export default function BasicTable() {
@@ -53,7 +57,7 @@ export default function BasicTable() {
     color: 'white',
     textAlign: 'center',
     borderBottom: '2px solid black',
-    backgroundColor: '#535359',
+    backgroundColor: '#1D3448',
   };
   
   const getOddsToHitCellStyle = (percentage) => {
@@ -74,7 +78,7 @@ export default function BasicTable() {
     <div style={{ display: 'flex',  marginBottom: '20px' }}>
       <Autocomplete
         options={playerNames}
-        style={{ width: 200, marginBottom: '20px', marginLeft: '20px', background:'#535359',}}
+        style={{ width: 200, marginBottom: '20px', marginLeft: '20px', background:'#1D2C36', color:'white,'}}
         renderInput={(params) => <TextField {...params} label="Filter by Team" />}
         value={selectedPlayer}
         onChange={(event, newValue) => {
@@ -83,7 +87,7 @@ export default function BasicTable() {
       />
       <Autocomplete
         options={playerNames}
-        style={{ width: 200, marginBottom: '20px',marginLeft: '20px', background:'#535359',}}
+        style={{ width: 200, marginBottom: '20px',marginLeft: '20px', background:'#1D2C36',}}
         renderInput={(params) => <TextField {...params} label="Filter by Player" />}
         value={selectedPlayer}
         onChange={(event, newValue) => {
@@ -92,7 +96,7 @@ export default function BasicTable() {
       />
       <Autocomplete
         options={playerNames}
-        style={{ width: 200, marginBottom: '20px',marginLeft: '20px', background:'#535359',}}
+        style={{ width: 200, marginBottom: '20px',marginLeft: '20px', background:'#1D2C36',}}
         renderInput={(params) => <TextField {...params} label="Filter by Book"
         value={selectedPlayer}
         onChange={(event, newValue) => {
@@ -101,7 +105,7 @@ export default function BasicTable() {
       />
       <Autocomplete
         options={playerNames}
-        style={{ width: 200, marginBottom: '20px', marginLeft: '20px', background:'#535359',}}
+        style={{ width: 200, marginBottom: '20px', marginLeft: '20px', background:'#1D2C36',}}
         renderInput={(params) => <TextField {...params} label="Filter by Player" />}
         value={selectedPlayer}
         onChange={(event, newValue) => {
@@ -109,14 +113,14 @@ export default function BasicTable() {
         }}
       />
     </div>
-    <TableContainer component={Paper} sx={{ maxWidth: '100%', margin: 'auto', boxShadow: 3, background: '#343436' }}>
+    <TableContainer component={Paper} sx={{ maxWidth: '100%', margin: 'auto', boxShadow: 3, background: '#03161C' }}>
       <Table sx={{ minWidth: 100 }} aria-label="simple table">
         <TableHead >
           <TableRow >
             <TableCell style={HeadercellStyle}>Players</TableCell>
             <TableCell style={HeadercellStyle}>Stat</TableCell>
             <TableCell style={HeadercellStyle}>O/U</TableCell>
-            <TableCell style={{ color: 'white', textAlign: 'center', backgroundColor: '#535359',  borderBottom: '2px solid black',}}>
+            <TableCell style={{ color: 'white', textAlign: 'center', backgroundColor: '#1D3448',  borderBottom: '2px solid black',}}>
              <div style={imageContainerStyle}>
                 <img src={PrizPicksLogo} alt="FanDuel" style={imageStyle} />
               </div></TableCell>
@@ -162,7 +166,7 @@ export default function BasicTable() {
               </TableCell>
               <TableCell align="center" style={cellStyle}>{row.Stat}</TableCell>
               <TableCell align="center" style={cellStyle}>{row.O_U}</TableCell>
-              <TableCell align="center" style={{ color: 'white', backgroundColor: '#535359', borderBottom: '2px solid black', }}>{row.SportsbookLine}</TableCell>
+              <TableCell align="center" style={{ color: 'white', backgroundColor: '#223446', borderBottom: '2px solid black', }}>{row.SportsbookLine}</TableCell>
               <TableCell align="center" style={cellStyle}>{row.PrizePicks}</TableCell>
               <TableCell align="center" style={cellStyle}>
                 <div style={getOddsToHitCellStyle(row._OddstoHit)}>
