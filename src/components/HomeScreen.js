@@ -3,6 +3,7 @@ import Pat from '../images/content/hurt_pat.png';
 import ScrollBar from "./ScrollBar";
 import AboutScreen from '../components/AboutScreen';
 import Footer from './Footer';
+import FAQ from './FAQ.js'
 
 const HomeScreen = () => {
     return (
@@ -29,6 +30,7 @@ const HomeScreen = () => {
             </div>
             <AboutScreen/>
             <ScrollBar/>
+            <FAQ/>
             <Footer/>
         </div>
     )
