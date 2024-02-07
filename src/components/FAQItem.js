@@ -7,7 +7,7 @@ const FAQItem = ({ question, answer }) => {
     <div className="mb-4">
       <div className="bg-white shadow-md rounded-lg overflow-hidden">
         <button
-          className="flex justify-between items-center w-full text-left text-lg font-semibold py-2 px-4 bg-gray-100 hover:bg-gray-200"
+          className="flex justify-between items-center w-full text-left text-lg font-semibold py-2 px-4 bg-[gray-100] hover:bg-gray-200"
           onClick={() => setIsOpen(!isOpen)}
         >
           {question}
