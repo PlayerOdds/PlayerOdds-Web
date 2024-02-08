@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 
 const TWNavBar = () => {
     const Links = [
+        {name: 'Player Analysis', link: '/Player-Analysis'},
         { name: 'DFS Optimizer', link: '/DFS' },
         { name: 'Pricing', link: '/pricing' },
         /** { name: 'Contact', link: '/contact' }, */
