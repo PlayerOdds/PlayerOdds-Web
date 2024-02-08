@@ -1,7 +1,6 @@
 import React from 'react';
-import TWNavBar from '../components/TWNavBar';
+import TWNavBar from '../shared-components/NavBar/TWNavBar.js';
 import HomeScreen from '../screens/HomeScreen/HomeScreen.js';
-
 import { Routes, Route } from 'react-router-dom';
 import Pricing from '../screens/Pricing/pricing';
 import DFSOptimizer from '../screens/DFS-Optimizer/DFSOptimizer';

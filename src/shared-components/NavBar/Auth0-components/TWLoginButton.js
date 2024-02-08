@@ -1,6 +1,5 @@
 import { useAuth0 } from '@auth0/auth0-react';
 
-// Create a styled button that inherits styles from NavLink
 const TWLoginButton = () => {
     const { loginWithRedirect, isAuthenticated } = useAuth0();
 
