@@ -6,6 +6,8 @@ import Pinnacle from './content/Pinnacle.webp'
 import Barstool from './content/Barstool.png'
 import MenuIcon from './content/main-menu.png'
 import CheckMark from './content/check-mark.png'
+import PrizPicksLogo from './content/PrizePicksLogo.svg'
+import XIcon  from './content/twitter.png';
 
 export {
   DraftKingsLogo,
@@ -15,5 +17,7 @@ export {
   Pinnacle,
   Barstool,
   MenuIcon,
-  CheckMark
+  CheckMark,
+  PrizPicksLogo,
+  XIcon
  };

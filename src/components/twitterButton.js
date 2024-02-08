@@ -1,33 +1,15 @@
-import styled from 'styled-components';
-import twitterLogo from '../images/content/twitter.png'; // Path to your Twitter logo image
-
-const StyledTwitterButton = styled.button`
-    background-image: url(${twitterLogo});
-    background-color: transparent; // Make background transparent
-    background-size: cover; // Cover the entire area of the button
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 12px 12px; // Size of the IMage
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-
-    &:hover {
-        transform: scale(1.1); // Slightly enlarge button on hover for effect
-        
-    }
-
-    @media (max-width: 852px) {
-        flex-direction: row; // Keep it row to have items side by side
-       
-    }
-`;
+import React from 'react';
+import XIcon from '../images/content/twitter.png'; // Ensure correct variable naming (case-sensitive)
 
 const TwitterButton = ({ twitterUrl }) => {
     return (
-        <StyledTwitterButton onClick={() => window.open(twitterUrl, "_blank")}>
-        </StyledTwitterButton>
+        // Using Tailwind CSS for styling except for backgroundImage
+        <button
+            onClick={() => window.open(twitterUrl, "_blank")}
+            className="bg-transparent p-3 border-none rounded-md cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110"
+            style={{ backgroundImage: `url(${XIcon})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}
+        >
+        </button>
     );
 }
 

@@ -6,20 +6,20 @@ import PrizePicks from '../images/content/prizepicks-banner.png';
 import Rocket from '../images/content/rocket_arrow.png';
 
 const images = [FanDuel, Bookie, Data, PrizePicks, FanDuel, Bookie, Data, PrizePicks, FanDuel, Bookie, Data, PrizePicks];
+const doubledImages = [...images, ...images]; // Double The content so that it stops cutting out. Needs cleaning.
 
 const ScrollBar = () => {
     return (
         <div className='mx-auto flex flex-col justify-center max-w-full pt-32'>
             <div className='overflow-hidden'>
                 <ul className='flex animate-scroll'>
-                    {images.map((image, index) => (
+                    {doubledImages.map((image, index) => (
                         <li key={index} className='flex-shrink-0 mx-2 custom-image-container'>
                             <img src={image} alt={`Image ${index}`} />
                         </li>
                     ))}
                 </ul>
-            </div>
-                
+            </div>                
         </div>
     );        
 }
