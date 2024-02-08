@@ -1,8 +1,8 @@
 import React from 'react';
 import TWNavBar from '../components/TWNavBar';
-import HomeScreen from '../components/HomeScreen';
+import HomeScreen from '../screens/HomeScreen/HomeScreen.js';
 import AboutScreen from '../components/AboutScreen';
-import ScrollBar from '../components/ScrollBar';
+import ScrollBar from '../screens/HomeScreen/ScrollBar.js';
 import { Routes, Route } from 'react-router-dom';
 import Pricing from '../screens/Pricing/pricing';
 import DFSOptimizer from '../screens/DFS-Optimizer/DFSOptimizer';

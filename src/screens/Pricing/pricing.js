@@ -1,6 +1,7 @@
 import React from "react";
 import {CheckMark} from '../../images/ImageRepository'
- 
+import HerbLuka from '../../images/content/herb-luka.png'
+
 const pricingPlans = [
     {
         plan: "Monthly",
@@ -90,6 +91,7 @@ const Pricing = () => {
                     ))}
                 </div>
             </div>
+            <img src={HerbLuka} alt="Luka" className="mx-auto mt-10" style={{ width: '800px', height: 'auto' }}/>
         </div>
     )
 }

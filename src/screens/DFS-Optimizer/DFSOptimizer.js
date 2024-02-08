@@ -10,6 +10,7 @@ import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import { useState } from 'react';
 import { DraftKingsLogo, Bovada, FanDuel, BetMGM, Pinnacle, Barstool, PrizPicksLogo } from '../../images/ImageRepository';
+import Footer from '../../components/Footer';
 
 function createData(name, Stat, O_U, SportsbookLine,PrizePicks, _OddstoHit, Book1, Book2, Book3, Book4, Book5, Book6) {
   return { name, Stat, O_U, SportsbookLine, PrizePicks, _OddstoHit, Book1, Book2, Book3, Book4, Book5, Book6 };
@@ -208,6 +209,8 @@ export default function BasicTable() {
         </TableBody>
       </Table>
     </TableContainer>
+     <Footer/>
     </>
+    
   );
 }
