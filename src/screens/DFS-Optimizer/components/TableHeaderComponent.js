@@ -1,4 +1,3 @@
-// TableHeaderComponent.js
 import React from 'react';
 import { TableCell, TableHead, TableRow } from '@mui/material';
 import { HeadercellStyle, imageContainerStyle, imageStyle } from './styles'; // Assume styles are exported from a separate file

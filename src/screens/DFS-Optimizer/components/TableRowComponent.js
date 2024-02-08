@@ -1,6 +1,6 @@
 import React from 'react';
 import { TableCell, TableRow } from '@mui/material';
-import { cellStyle, getOddsToHitCellStyle, imageContainerStyle, imageStyle } from './styles'; // Assume styles are exported from a separate file
+import { cellStyle, getOddsToHitCellStyle, imageContainerStyle, imageStyle } from './styles'; 
 import { DraftKingsLogo, Bovada, FanDuel, BetMGM, Pinnacle, Barstool } from '../../../images/ImageRepository';
 
 const TableRowComponent = ({ row }) => (
