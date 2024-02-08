@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useAuth0 } from '@auth0/auth0-react';
-import LogoBanner from '../images/content/oddsalert_banner1_transparent.png';
-import MenuIcon from '../images/content/main-menu.png';
-import ExitIcon from '../images/content/close.png';
-import TWLoginButton from "./TWLoginButton";
-import LogoutButton from "./LogoutButton";
+import {LogoBanner, MenuIcon, ExitIcon} from '../../images/ImageRepository'
+import TWLoginButton from "./Auth0-components/TWLoginButton";
+import LogoutButton from "./Auth0-components/LogoutButton";
 import { Link } from 'react-router-dom';
 
 const TWNavBar = () => {
     const Links = [
-        {name: 'Player Analysis', link: '/Player-Analysis'},
+        { name: 'Player Analysis', link: '/Player-Analysis'},
         { name: 'DFS Optimizer', link: '/DFS' },
         { name: 'Pricing', link: '/pricing' },
-        /** { name: 'Contact', link: '/contact' }, */
     ];
 
     const [isOpen, setIsOpen] = useState(false);

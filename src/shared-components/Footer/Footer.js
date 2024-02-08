@@ -1,6 +1,6 @@
 import React from 'react';
-import TwitterButton from './twitterButton'; // Ensure this import path matches the location of your TwitterButton component
-import OddsLogo from '../images/content/OddsLogo.png'
+import TwitterButton from './components/twitterButton'; 
+import {OddsLogo} from '../../images/ImageRepository'
 
 const twitterUrl = "https://twitter.com/OddsAlert_";
 

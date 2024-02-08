@@ -1,7 +1,6 @@
 import React from 'react';
-import Clock from '../images/content/clock-img.png';
-import Bookie from '../images/content/books.png';
-import Data from '../images/content/datapoint.png';
+import {Clock, Bookie, DataPoint} from '../../../images/ImageRepository'
+
 
 const AboutScreen = () => {
     return (
@@ -30,7 +29,7 @@ const AboutScreen = () => {
                         </div>
 
                         <div className='bg-blue rounded-[35px] h-100 shadow-2xl p-8 flex flex-col items-center transition-all duration-300 hover:-translate-y-4 cursor-pointer md:mt-16'>
-                            <img src={Data} className='object-scale-down h-32 w-32 mb-4' alt=''/>
+                            <img src={DataPoint} className='object-scale-down h-32 w-32 mb-4' alt=''/>
                             <h3 className='text-white text-xl font-semibold px-5 py-2 text-center mb-4'>Consistently Perfecting the Model</h3>
                             <p className='text-zinc-300 text-center'>The Optimizer is constantly being worked on to guarantee the best possible bets to place.</p>
                         </div>

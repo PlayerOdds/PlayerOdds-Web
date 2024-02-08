@@ -1,11 +1,13 @@
 import React from 'react';
 import Pat from '../../images/content/hurt_pat.png';
-import ScrollBar from "./ScrollBar";
-import AboutScreen from '../../components/AboutScreen';
-import Footer from '../../components/Footer';
-import FAQ from './FAQ'
+import ScrollBar from "./components/ScrollBar";
+import AboutScreen from './components/AboutScreen';
+import Footer from '../../shared-components/Footer/Footer';
+import FAQ from './components/FAQ'
 
 const HomeScreen = () => {
+console.log("home")
+
     return (
         <div className='bg-md:px-5 p-4 max-w-screen-2xl mx-auto mt-100'>
             <div>

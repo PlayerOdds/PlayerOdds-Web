@@ -2,8 +2,8 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import DFSOptimizer from './DFSOptimizer'; 
 import Pricing from '../screens/Pricing/pricing';
-import HomeScreen from '../components/HomeScreen';
-import AboutScreen from '../components/AboutScreen';
+import HomeScreen from '../shared-components/HomeScreen';
+import AboutScreen from '../screens/HomeScreen/components/AboutScreen';
 import playerAnalysis from '../screens/Player-Analysis/playerAnalysis';
 
 
