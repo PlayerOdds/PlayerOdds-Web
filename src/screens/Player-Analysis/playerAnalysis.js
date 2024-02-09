@@ -16,7 +16,6 @@ const games = [
       },
     ],
   },
-  // Add more games as needed
 ];
 
 const PlayerAnalysis = () => {
@@ -24,20 +23,12 @@ const PlayerAnalysis = () => {
   const [openPlayerName, setOpenPlayerName] = useState(null);
 
   const toggleGame = (gameId) => {
-    if (openGameId === gameId) {
-      setOpenGameId(null);
-      setOpenPlayerName(null); // Reset player selection when toggling games
-    } else {
-      setOpenGameId(gameId);
-    }
+    setOpenGameId(openGameId === gameId ? null : gameId);
+    setOpenPlayerName(null); 
   };
 
   const togglePlayer = (playerName) => {
-    if (openPlayerName === playerName) {
-      setOpenPlayerName(null);
-    } else {
-      setOpenPlayerName(playerName);
-    }
+    setOpenPlayerName(openPlayerName === playerName ? null : playerName);
   };
 
   return (
@@ -51,20 +42,29 @@ const PlayerAnalysis = () => {
             {game.title} <span className="text-sm font-normal">{game.date}</span>
           </div>
           {openGameId === game.id && (
-            <ul className="mt-2">
-              {game.players.map((player, index) => (
-                <li key={index} className="py-1 text-white cursor-pointer" onClick={() => togglePlayer(player.name)}>
-                  {player.name}
-                  {openPlayerName === player.name && (
-                    <ul className="mt-2 pl-4 text-gray-400">
+            game.players.map((player, index) => (
+              <div key={index} className="py-1 text-white cursor-pointer" onClick={() => togglePlayer(player.name)}>
+                {player.name}
+                {openPlayerName === player.name && (
+                  <>
+                    <div className="mt-2 p-4">
+                      <div className="border-4 border-pink-500 rounded-xl overflow-hidden">
+                        <div className="flex justify-between items-center bg-black w-full p-2">
+                          {Array.from({ length: 6 }).map((_, idx) => (
+                            <div key={idx} className="bg-gray-500 w-24 h-24 rounded flex items-center justify-center text-sm">Passing Yards</div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <ul className="text-gray-400 mt-2">
                       {player.previousGames.map((gameData, gameIndex) => (
                         <li key={gameIndex}>{gameData}</li>
                       ))}
                     </ul>
-                  )}
-                </li>
-              ))}
-            </ul>
+                  </>
+                )}
+              </div>
+            ))
           )}
         </div>
       ))}
