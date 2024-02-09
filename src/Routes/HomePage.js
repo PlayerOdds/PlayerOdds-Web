@@ -2,13 +2,13 @@ import React from 'react';
 import TWNavBar from '../shared-components/NavBar/TWNavBar.js';
 import HomeScreen from '../screens/HomeScreen/HomeScreen.js';
 import { Routes, Route } from 'react-router-dom';
-import Pricing from '../screens/Pricing/pricing';
-import DFSOptimizer from '../screens/DFS-Optimizer/DFSOptimizer';
-import PlayerAnalysis from '../screens/Player-Analysis/playerAnalysis';
+import Pricing from '../screens/Pricing/pricing.js';
+import DFSOptimizer from '../screens/DFS-Optimizer/DFSOptimizer.js';
+import PlayerAnalysis from '../screens/Player-Analysis/playerAnalysis.js';
 
 
 
-const HomePage = () => {
+const AppRouting = () => {
     return (
         <div>
             <TWNavBar/>
@@ -22,4 +22,4 @@ const HomePage = () => {
     );        
 }
 
-export default HomePage;
+export default AppRouting;
