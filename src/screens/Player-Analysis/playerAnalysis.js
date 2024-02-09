@@ -5,7 +5,7 @@ const playerAnalysis = () => {
   console.log("Hello")
 
     return (
-      <div>Hello World</div>
+      <div className="text-white">Hello World</div>
     )
 }
 
