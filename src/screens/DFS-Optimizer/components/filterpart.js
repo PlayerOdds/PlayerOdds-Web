@@ -21,9 +21,8 @@ import { WTA } from '../../../images/ImageRepository';
 import { ITF } from '../../../images/ImageRepository';
 
 export default function MultiSelectDropdown() {
-    const [checked, setChecked] = React.useState([]);
     const [anchorEl, setAnchorEl] = React.useState(null);
-  
+
     // Define options with labels for NBA, NFL, NHL, MLB, etc., and their image imports
     const options = [
       { label: 'NBA', image: NBA },
@@ -35,38 +34,40 @@ export default function MultiSelectDropdown() {
       { label: 'ATP', image: ATP },
       { label: 'WTA', image: WTA },
       { label: 'ITF', image: ITF },
-      
       // Add more options as needed
     ];
-  
+
+    // Automatically select all options by setting their indices in the 'checked' state
+    const [checked, setChecked] = React.useState(options.map((_, index) => index));
+
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
-      };
-    
-      const handleClose = () => {
+    };
+
+    const handleClose = () => {
         setAnchorEl(null);
-      };
-    
-      const handleToggle = (value) => () => {
+    };
+
+    const handleToggle = (value) => () => {
         const currentIndex = checked.indexOf(value);
         const newChecked = [...checked];
-    
+
         if (currentIndex === -1) {
           newChecked.push(value);
         } else {
           newChecked.splice(currentIndex, 1);
         }
-    
+
         setChecked(newChecked);
-      };
-  
-      const handleSelectAll = () => {
-          setChecked(options.map((_, index) => index)); // Select all options
-      };
-  
-      const handleDeselectAll = () => {
-          setChecked([]); // Clear selection
-      };
+    };
+
+    const handleSelectAll = () => {
+        setChecked(options.map((_, index) => index)); // Select all options
+    };
+
+    const handleDeselectAll = () => {
+        setChecked([]); // Clear selection
+    };
     
       return (
         <div>
