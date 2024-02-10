@@ -9,14 +9,151 @@ const games = [
       {
         name: 'Brock Purdy - SF',
         previousGames: ['300 yards, 3 TDs', '250 yards, 2 TDs'],
+        season:[{
+          Games_Played:['14'],
+          Rush_Att:['0.1'],
+          Rush_Yards:['-0.1'],
+          Rush_TD:['0'],
+          Rec_Tgt:['2.9'],
+          Receptions:['1.8'],
+          Rec_Yards:['23.9'],
+          Rec_TD:['0.1'],
+        }],
+        last_10:[{
+          Games_Played:['10'],
+          Rush_Att:['0.1'],
+          Rush_Yards:['-0.1'],
+          Rush_TD:['0'],
+          Rec_Tgt:['3.3'],
+          Receptions:['2'],
+          Rec_Yards:['23.3'],
+          Rec_TD:['0.1'],
+        }],
+        last_5:[{
+          Games_Played:['5'],
+          Rush_Att:['0.2'],
+          Rush_Yards:['-0.2'],
+          Rush_TD:['0'],
+          Rec_Tgt:['3'],
+          Receptions:['2.2'],
+          Rec_Yards:['27.6'],
+          Rec_TD:['0.2'],
+        }],
+        previous:[{
+          Games_Played:['1'],
+          Rush_Att:['0'],
+          Rush_Yards:['0'],
+          Rush_TD:['0'],
+          Rec_Tgt:['2'],
+          Receptions:['1'],
+          Rec_Yards:['8'],
+          Rec_TD:['0'],
+        }],
+        vs_opponent:[{
+          Games_Played:['-'],
+          Rush_Att:['-'],
+          Rush_Yards:['-'],
+          Rush_TD:['-'],
+          Rec_Tgt:['-'],
+          Receptions:['-'],
+          Rec_Yards:['-'],
+          Rec_TD:['-'],
+        }],
       },
       {
         name: 'Patrick Mahomes - KC',
         previousGames: ['350 yards, 4 TDs', '280 yards, 2 TDs'],
+        season:[{
+          Games_Played:['14'],
+          Rush_Att:['0.1'],
+          Rush_Yards:['-0.1'],
+          Rush_TD:['0'],
+          Rec_Tgt:['2.9'],
+          Receptions:['1.8'],
+          Rec_Yards:['23.9'],
+          Rec_TD:['0.1'],
+        }],
+        last_10:[{
+          Games_Played:['10'],
+          Rush_Att:['0.1'],
+          Rush_Yards:['-0.1'],
+          Rush_TD:['0'],
+          Rec_Tgt:['3.3'],
+          Receptions:['2'],
+          Rec_Yards:['23.3'],
+          Rec_TD:['0.1'],
+        }],
+        last_5:[{
+          Games_Played:['5'],
+          Rush_Att:['0.2'],
+          Rush_Yards:['-0.2'],
+          Rush_TD:['0'],
+          Rec_Tgt:['3'],
+          Receptions:['2.2'],
+          Rec_Yards:['27.6'],
+          Rec_TD:['0.2'],
+        }],
+        previous:[{
+          Games_Played:['1'],
+          Rush_Att:['0'],
+          Rush_Yards:['0'],
+          Rush_TD:['0'],
+          Rec_Tgt:['2'],
+          Receptions:['1'],
+          Rec_Yards:['8'],
+          Rec_TD:['0'],
+        }],
+        vs_opponent:[{
+          Games_Played:['-'],
+          Rush_Att:['-'],
+          Rush_Yards:['-'],
+          Rush_TD:['-'],
+          Rec_Tgt:['-'],
+          Receptions:['-'],
+          Rec_Yards:['-'],
+          Rec_TD:['-'],
+        }],
       },
     ],
   },
 ];
+
+const renderStatsTable = (player) => (
+  <table className="min-w-full table-fixed text-center">
+    <thead>
+      <tr>
+        <th className="px-4 py-2">Category</th>
+        <th className="px-4 py-2">Games Played</th>
+        <th className="px-4 py-2">Rush Att</th>
+        <th className="px-4 py-2">Rush Yds</th>
+        <th className="px-4 py-2">Rush TDs</th>
+        <th className="px-4 py-2">Rec TGT</th>
+        <th className="px-4 py-2">Rec</th>
+        <th className="px-4 py-2">Rec Yds</th>
+        <th className="px-4 py-2">Rec TD</th>
+      </tr>
+    </thead>
+    <tbody>
+      {['season', 'last_10', 'last_5', 'previous', 'vs_opponent'].map((category) => (
+        <tr key={category}>
+          <td className="border px-4 py-2">{category.toUpperCase()}</td>
+          {player[category].map((stat) => (
+            <>
+              <td className="border px-4 py-2">{stat.Games_Played}</td>
+              <td className="border px-4 py-2">{stat.Rush_Att}</td>
+              <td className="border px-4 py-2">{stat.Rush_Yards}</td>
+              <td className="border px-4 py-2">{stat.Rush_TD}</td>
+              <td className="border px-4 py-2">{stat.Rec_Tgt}</td>
+              <td className="border px-4 py-2">{stat.Receptions}</td>
+              <td className="border px-4 py-2">{stat.Rec_Yards}</td>
+              <td className="border px-4 py-2">{stat.Rec_TD}</td>
+            </>
+          ))}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+);
 
 const over_stats = [
   { key: "L5", value: "60%" },
@@ -85,9 +222,7 @@ const PlayerAnalysis = () => {
                       ))}
                     </div>
                     <ul className="text-gray-400 mt-2">
-                      {player.previousGames.map((gameData, gameIndex) => (
-                        <li key={gameIndex}>{gameData}</li>
-                      ))}
+                    {renderStatsTable(player)}
                     </ul>
                   </>
                 )}
