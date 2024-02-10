@@ -21,6 +21,15 @@ import BetRiversBanner from './content/betrivers-banner.webp'
 import OddsLogo from './content/OddsLogo.png'
 import ExitIcon from './content/close.png'
 import LogoBanner from './content/oddsalert_banner1_transparent.png'
+import NBA from './content/nba.png'
+import NFL from './content/nfl_logo.png'
+import MLB from './content/mlb.png'
+import NHL from './content/nhl.png'
+import NCAAF from './content/NCAAF.png'
+import WNBA from './content/WNBA.png'
+import ATP from './content/ATP.png'
+import WTA from './content/WTA.png'
+import ITF from './content/ITF.png'
 
 export {
   DraftKingsLogo,
@@ -46,5 +55,14 @@ export {
   OddsLogo,
   ExitIcon,
   LogoBanner,
-  
+  NBA,
+  NFL,
+  MLB,
+  NHL,
+  NCAAF,
+  WNBA,
+  ATP,
+  WTA,
+  ITF,
+
  };
