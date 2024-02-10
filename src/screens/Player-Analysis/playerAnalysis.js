@@ -3,6 +3,7 @@ import React, { useState } from "react";
 //TODO - Add Slide animation of data for onclick of the player
 //TODO - Add Arrow bar signaling if the state is open or close (maybe add an animation of the arrow flipping up and down for each click
 //TODO - Add more stlying to the player data
+//TODO - Seperate into seperate components for clean file strucutre
 
 const games = [
   {
