@@ -6,15 +6,15 @@ const TableRowComponent = ({ row }) => {
   // Use useState to manage hover state
   const [hover, setHover] = useState(false);
 
-  // Conditional style for hover effect
+ // Hover Affect
   const hoverStyle = hover ? { backgroundColor: '#232d36' } : {};
 
   return (
     <TableRow
       key={row.name}
-      onMouseEnter={() => setHover(true)} // Set hover to true when mouse enters the row
-      onMouseLeave={() => setHover(false)} // Set hover to false when mouse leaves the row
-      style={hoverStyle} // Apply conditional styling based on hover state
+      onMouseEnter={() => setHover(true)} 
+      onMouseLeave={() => setHover(false)} 
+      style={hoverStyle} 
     >
       <TableCell style={cellStyle} align="center" component="th" scope="row">
         {row.name}
