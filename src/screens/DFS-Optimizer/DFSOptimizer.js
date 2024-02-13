@@ -9,6 +9,7 @@ import PlayerLine from './components/PlayerLine';
 import PlayerInfo from './components/PlayerInfo';
 import OverUnder from './components/OverUnder'
 import OddsToHit from './components/OddsToHit';
+import Platform from './components/platform';
 
 export default function BasicTable() {
   const [selectedOptions, setSelectedOptions] = useState([]);
@@ -48,16 +49,7 @@ export default function BasicTable() {
           <PlayerLine line={player.line} betType={player.betType}/>
           <OverUnder pick={player.pick}/>
           <OddsToHit odds={player.odds} oddsValue={player.oddsValue}/>
-          {/* Platforms */}
-        <div className="grid grid-cols-4 gap-1 mt-2">
-          {player.platforms.map((platform, index) => (
-            <div key={index} className="bg-gray-700 px-2 py-1 rounded flex justify-between items-center">
-              <span className="text-xs font-semibold">{platform.platform}</span>
-              <span className="text-xs">{platform.line}</span>
-              <span className="text-xs">{platform.odds}</span>
-            </div>
-          ))}
-        </div>
+          <Platform platforms={player.platforms} />
       </div>
     </div>
     ))}
