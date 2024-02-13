@@ -199,11 +199,11 @@ const PlayerAnalysis = () => {
           </div>
           {openGameId === game.id && (
             game.players.map((player, index) => (
-              <div key={index} className="py-1 text-white cursor-pointer" onClick={() => togglePlayer(player.name)}>
+              <div key={index} className="py-4 text-white cursor-pointer bg-slate-800 mt-2 p-8 " onClick={() => togglePlayer(player.name)}>
                 {player.name}
                 {openPlayerName === player.name && (
                   <>
-                    <div className="bg-black flex flex-wrap items-center" style={{ gap: '0px' }}>
+                    <div className="bg-transparent flex flex-wrap items-center" style={{ gap: '0px' }}>
                       {Array.from({ length: 6 }).map((_, idx) => (
                         <div key={idx} className="border-pink-500 rounded-xl px-24 py-8 flex flex-col items-center justify-center text-center" style={{ marginRight: '-2px', marginLeft: '-2px' }}>
                           <div className="flex flex-wrap justify-around items-center w-full mb-2">
@@ -214,7 +214,7 @@ const PlayerAnalysis = () => {
                               </div>
                             ))}
                           </div>
-                          <div className="bg-gray-500 w-32 h-24 rounded flex items-center justify-center text-sm">Passing Yards</div>
+                          <div className="bg-slate-400	 w-32 h-24 rounded flex items-center justify-center text-sm">Passing Yards</div>
                           <div className="flex flex-wrap justify-around items-center w-full mb-2">
                             {under_stats.map((stat, index) => (
                               <div key={index} className="text-sm flex flex-col items-center p-2 mt-2">
