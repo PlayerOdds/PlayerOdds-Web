@@ -36,3 +36,24 @@ export const getOddsToHitCellStyle = (percentage) => {
     borderBottom: '2px solid black',
   };
 };
+
+export const getO_UStyle = (text) => {
+  
+  const isOver = text.toLowerCase() === 'over';
+
+ 
+  const backgroundColor = isOver ? '#122a31' : '#2a192b'; 
+  const color = isOver ? '#6ae487' : '#ee3a4a'; 
+  const borderColor = isOver ? '#1b3239' : '#322233';
+
+  return {
+    color: color,
+    textAlign: 'center',
+    backgroundColor: backgroundColor,
+    borderRadius: '10px',
+    padding: '15px',
+    display: 'inline-block',
+    border: `2px solid ${borderColor}`,
+  };
+};
+

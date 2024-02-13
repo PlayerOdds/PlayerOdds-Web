@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TableCell, TableRow } from '@mui/material';
-import { cellStyle, getOddsToHitCellStyle } from './styles';
+import { cellStyle, getO_UStyle, getOddsToHitCellStyle } from './styles';
 
 const TableRowComponent = ({ row }) => {
   // Use useState to manage hover state
@@ -19,8 +19,12 @@ const TableRowComponent = ({ row }) => {
       <TableCell style={cellStyle} align="center" component="th" scope="row">
         {row.name}
       </TableCell>
-      <TableCell align="center" style={cellStyle}>{row.Stat}</TableCell>
-      <TableCell align="center" style={cellStyle}>{row.O_U}</TableCell>
+      <TableCell align="center"  style={cellStyle}>{row.Stat}</TableCell>
+      <TableCell align="center" style={cellStyle}>
+      <div style={getO_UStyle(row.O_U)}>
+        {row.O_U}
+        </div>
+      </TableCell>
       <TableCell align="center" style={{ ...cellStyle, color: 'white', backgroundColor: '#223446', borderBottom: '2px solid black' }}>
         {row.SportsbookLine}
       </TableCell>
