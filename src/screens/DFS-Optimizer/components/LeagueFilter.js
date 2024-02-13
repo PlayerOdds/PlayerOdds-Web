@@ -23,7 +23,7 @@ import { ITF } from '../../../images/ImageRepository';
 export default function MultiSelectDropdown() {
     const [anchorEl, setAnchorEl] = React.useState(null);
 
-    // Define options with labels for NBA, NFL, NHL, MLB, etc., and their image imports
+
     const options = [
       { label: 'NBA', image: NBA },
       { label: 'NFL', image: NFL },
