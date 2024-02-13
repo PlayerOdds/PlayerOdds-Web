@@ -17,6 +17,16 @@ export const cellStyle = {
   borderBottom: '2px solid black', 
 };
 
+export const rowSpacingAfter = {
+  position: 'relative',
+};
+
+export const rowStyle = {
+  marginBottom: '10px', // Adds space between rows
+};
+
+
+
 export const HeadercellStyle = {
   color: 'white',
   textAlign: 'center',
