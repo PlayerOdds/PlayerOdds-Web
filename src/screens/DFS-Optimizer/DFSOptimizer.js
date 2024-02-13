@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { TableContainer, Table, Paper, TableBody } from '@mui/material';
 import TableRowComponent from './components/TableRowComponent';
 import TableHeaderComponent from './components/TableHeaderComponent';
-import MultiSelectDropdown from './components/LeagueFilter'; // Import the component
-import SearchBar from './components/SearchBar'; // Make sure this path is correct
+import TableFilter from './components/TableFilter'; // Make sure this path is correct
 import { rows } from './components/data'; 
 
 export default function BasicTable() {
@@ -22,15 +21,7 @@ export default function BasicTable() {
     <>
       <TableContainer component={Paper} sx={{ maxWidth: '100%', margin: 'auto', boxShadow: 3, background: '#03161C' }}>
         {/* Flex container to align items */}
-        <div style={{ padding: '20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          
-          <div style={{ marginRight: '20px' }}> 
-            <MultiSelectDropdown options={playerOptions} setSelectedOptions={setSelectedOptions} />
-          </div>
-          <SearchBar/>
-        
-
-        </div>
+        <TableFilter/>
         <Table sx={{ minWidth: 100 }} aria-label="simple table">
           <TableHeaderComponent />
           <TableBody>

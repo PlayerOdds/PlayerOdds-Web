@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 
-export default function App() {
+// Changed the function name from App to SearchBar
+function SearchBar() {
   const playerNames = [
     { label: 'Player 1', value: 'player1' },
     { label: 'Player 2', value: 'player2' },
@@ -13,7 +14,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <div className="max-w-md mx-auto mt-10">
+      <div className="max-w-md mx-auto">
         <Autocomplete
           options={playerNames}
           style={{ width: 200, background:'#1D2C36', color: 'white' }}
@@ -47,3 +48,6 @@ export default function App() {
     </div>
   );
 }
+
+// Updated the export statement to export SearchBar instead of App
+export default SearchBar;
