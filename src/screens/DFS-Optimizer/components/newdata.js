@@ -1,5 +1,5 @@
-export function playersData = (
-    {
+export const playersData = [
+  {
       name: 'Josh Giddey',
       teamInfo: 'NBA / OKC / SG / #3',
       matchup: 'OKC @ ORL - 2/13 7:30 PM ET',
@@ -16,15 +16,5 @@ export function playersData = (
         
       ],
     },
-);
- 
-
-export function createData(name, teamInfo, matchup, betType, line, pick, odds, oddsValue, platforms) {
-    return { name, teamInfo, matchup, betType, line, pick, odds, oddsValue, platforms };
-  }
-  
-  export const rows = [
-    createData('Patrick Mahomes', 'Passing Yards', 'Under', 220.5, 225.5, '57.34%', -160, -156, -124, -143, -123, -154),
   ];
-  
   
