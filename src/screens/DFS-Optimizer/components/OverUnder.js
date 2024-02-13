@@ -1,5 +1,4 @@
 import React from "react";
-import {playersData} from './newdata'
 
 // console.log(playersData.pick)
 const OverUnder = ({pick}) => {

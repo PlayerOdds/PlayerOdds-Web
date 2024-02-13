@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TableContainer, Table, Paper, TableBody } from '@mui/material';
 import TableRowComponent from './components/TableRowComponent';
 import TableHeaderComponent from './components/TableHeaderComponent';
-import TableFilter from './components/TableFilter'; // Make sure this path is correct
+import TableFilter from './components/TableFilter'; 
 import { rows } from './components/data';
 import {playersData} from './components/newdata'
 import PlayerLine from './components/PlayerLine';
@@ -13,7 +13,7 @@ import Platform from './components/platform';
 
 export default function BasicTable() {
   const [selectedOptions, setSelectedOptions] = useState([]);
-  const [searchTerm, setSearchTerm] = useState(''); // New state for search term
+  const [searchTerm, setSearchTerm] = useState('');
 
   const playerOptions = rows.map(row => ({ label: row.name, value: row.name }));
 
@@ -40,18 +40,17 @@ export default function BasicTable() {
     </TableContainer>
     
    
-    <div className="bg-gray-900 p-4">
+  <div className="bg-gray-900 p-4">
     {playersData.map((player, idx) => (
       <div key={idx} className="bg-gray-800 text-white p-4 my-2 rounded-lg">
         <div className="grid grid-cols-5 gap-2"> 
-
           <PlayerInfo name={player.name} teamInfo={player.teamInfo} matchup={player.matchup}/>
           <PlayerLine line={player.line} betType={player.betType}/>
           <OverUnder pick={player.pick}/>
           <OddsToHit odds={player.odds} oddsValue={player.oddsValue}/>
           <Platform platforms={player.platforms} />
+        </div>
       </div>
-    </div>
     ))}
   </div>
   </>
