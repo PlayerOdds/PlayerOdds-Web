@@ -1,3 +1,5 @@
+//This will become an API service file when the backend is built out
+
 export const playersData = [
   {
       name: 'Josh Giddey',
