@@ -1,14 +1,13 @@
 import React from "react"
 import {playersData} from './newdata'
+import JoshG from './JoshG.webp'
 
-// console.log(playersData.teamInfo)
-
-const PlayerInfo = ({name, teamInfo,matchup }) => {
+const PlayerInfo = ({name, teamInfo, matchup }) => {
   return (
-  <div className="flex items-center space-x-2">
-    <img alt={name} className="w-12 h-12 rounded-full" />
+  <div className="flex items-center space-x-6">
+    <img src={JoshG} alt={name} className="w-20 h-20" />
       <div>
-        <h2 className="font-bold"></h2>
+        <p className='text-lg font-bold mb-4'>{name}</p>
         <p className="text-sm">{teamInfo}</p>
         <p className="text-sm">{matchup}</p>
       </div>
