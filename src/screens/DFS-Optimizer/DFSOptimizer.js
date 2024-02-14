@@ -43,27 +43,31 @@ export default function BasicTable() {
 
     <div className="bg-gray-900 p-4">
   {playersData.map((player, idx) => (
-    <div key={idx} className="bg-gray-800 text-white p-3 my-2 rounded-lg">
+    <div key={idx} className="bg-gray-800 max-w-[1800px] mx-auto text-white p-3 my-2 rounded-lg">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-1 items-center">
-
-        {/* PlayerInfo component */}
-        <div className="flex flex-col mb-3 items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
-
+        
+        {/* PlayerInfo stays on the left */}
+        <div className="flex flex-col mb-3 items-center justify-center col-span-1 lg:col-span-1">
           <PlayerInfo name={player.name} teamInfo={player.teamInfo} matchup={player.matchup}/>
         </div>
+        
+        {/* Group PlayerLine, OddsToHit, OverUnder closer together */}
+        <div className="flex flex-row border items-center justify-start lg:col-span-1 space-x-2"> {/* Adjusted for tighter grouping */}
+          <div className="border px-2"> {/* Further reduced padding for tightness */}
+            <PlayerLine line={player.line} betType={player.betType}/>
+          </div>
 
-        {/* Combined container for PlayerLine, OverUnder, and OddsToHit */}
-        {/* Centered vertically and horizontally on small screens, spaced evenly on large screens */}
-        <div className="flex flex-row items-center justify-between sm:space-x-1 md:flex-row md:justify-around lg:justify-around md:items-center md:space-x-2 md:space-y-0 lg:space-x-2 lg:space-y-0 col-span-1 md:col-span-3 lg:col-span-3">
-          <PlayerLine line={player.line} betType={player.betType}/>
-          <OddsToHit odds={player.odds} oddsValue={player.oddsValue}/>
-          <OverUnder pick={player.pick}/>
-          
+          <div className="border px-2">
+            <OddsToHit odds={player.odds} oddsValue={player.oddsValue}/>
+          </div>
+
+          <div className="border px-2">
+            <OverUnder pick={player.pick}/>
+          </div>
         </div>
 
-
-        {/* Platform component */}
-        <div className="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+        {/* Allocate more flexible space to Platform, allowing expansion or scrolling */}
+        <div className="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-2"> {/* Adjusted to give more room */}
           <Platform platforms={player.platforms} />
         </div>
       </div>
