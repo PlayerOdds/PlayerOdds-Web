@@ -16,7 +16,7 @@ const OverUnder = ({ pick }) => {
   const textSizeClass = "text-xs sm:text-sm md:text-l";
 
   return (
-    <div className="flex flex-col justify-center items-center space-y-2">
+    <div className="border flex flex-col justify-center items-center space-y-2">
       <div className={combinedClasses}>
         <span className={textSizeClass}>{pick}</span>
       </div>
