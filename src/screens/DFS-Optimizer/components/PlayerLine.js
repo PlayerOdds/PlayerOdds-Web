@@ -1,5 +1,4 @@
 import React from 'react';
-import {playersData} from './newdata'
 
 const PlayerLine = ({line, betType}) => {
     return (

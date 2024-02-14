@@ -1,5 +1,4 @@
 import React from "react"
-import {playersData} from './newdata'
 import JoshG from './JoshG.webp'
 
 const PlayerInfo = ({name, teamInfo, matchup }) => {
