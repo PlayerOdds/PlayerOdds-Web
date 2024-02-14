@@ -8,13 +8,52 @@ import React, { useState } from "react";
 const games = [
   {
     league: 'NFL',
-    todays_games:{ 
+    todays_games:[
+      { 
       id: 'game1',
       title: 'San Francisco 49ers at Kansas City Chiefs',
       date: '2/11 - 6:30 PM EST',
       players: [
         {
           name: 'Brock Purdy - SF',
+          stat:[
+            {
+              book:'PrizePicks',
+              stat: "Passing Yards",
+              Stat_Value: "276.5",
+              Over_Under: "Over"
+            },
+          {
+              book:'PrizePicks',
+              stat: "Rushing Yards",
+              Stat_Value: "27.5",
+              Over_Under: "Under"
+            },
+            {
+              book:'PrizePicks',
+              stat: "Completions",
+              Stat_Value: "276.5",
+              Over_Under: "Over"
+            },
+          {
+              book:'PrizePicks',
+              stat: "Passing Touchdowns",
+              Stat_Value: "1.5",
+              Over_Under: "Under"
+            },
+            {
+              book:'PrizePicks',
+              stat: "Total Touchdowns",
+              Stat_Value: "2.5",
+              Over_Under: "Over"
+            },
+          {
+              book:'PrizePicks',
+              stat: "Turnover",
+              Stat_Value: "0.5",
+              Over_Under: "Under"
+            }
+          ],
           previousGames: ['300 yards, 3 TDs', '250 yards, 2 TDs'],
           season:[{
             Games_Played:['14'],
@@ -82,6 +121,30 @@ const games = [
             stat: "Rushing Yards",
             Stat_Value: "27.5",
             Over_Under: "Under"
+          },
+          {
+            book:'PrizePicks',
+            stat: "Completions",
+            Stat_Value: "276.5",
+            Over_Under: "Over"
+          },
+        {
+            book:'PrizePicks',
+            stat: "Passing Touchdowns",
+            Stat_Value: "1.5",
+            Over_Under: "Under"
+          },
+          {
+            book:'PrizePicks',
+            stat: "Total Touchdowns",
+            Stat_Value: "2.5",
+            Over_Under: "Over"
+          },
+        {
+            book:'PrizePicks',
+            stat: "Turnover",
+            Stat_Value: "0.5",
+            Over_Under: "Under"
           }
         ],
           previousGames: ['350 yards, 4 TDs', '280 yards, 2 TDs'],
@@ -138,7 +201,8 @@ const games = [
         },
       ],
     },
-  }
+  ],
+  },
 ];
 
 const renderStatsTable = (player) => (
@@ -207,7 +271,8 @@ const PlayerAnalysis = () => {
 
   return (
     <div className="space-y-4">
-      {games.map((game) => (
+    {games.map((gameEntry) => (
+      gameEntry.todays_games.map((game) => (
         <div key={game.id} className="p-4 border rounded-lg shadow-lg">
           <div
             className="font-bold text-lg cursor-pointer text-white"
@@ -217,35 +282,37 @@ const PlayerAnalysis = () => {
           </div>
           {openGameId === game.id && (
             game.players.map((player, index) => (
-              <div key={index} className="py-4 text-white cursor-pointer bg-slate-800 mt-2 p-8 " onClick={() => togglePlayer(player.name)}>
+              <div key={index} className="py-4 text-white cursor-pointer bg-transparent mt-2 p-8 border" onClick={() => togglePlayer(player.name)}>
                 {player.name}
                 {openPlayerName === player.name && (
                   <>
-                    <div className="bg-transparent flex flex-wrap items-center" style={{ gap: '0px' }}>
-                      {Array.from({ length: 6 }).map((_, idx) => (
-                        <div key={idx} className="border-pink-500 rounded-xl px-24 py-8 flex flex-col items-center justify-center text-center" style={{ marginRight: '-2px', marginLeft: '-2px' }}>
-                          <div className="flex flex-wrap justify-around items-center w-full mb-2">
-                            {over_stats.map((stat, index) => (
-                              <div key={index} className="text-sm flex flex-col items-center p-2">
-                                <div>{`${stat.key}:`}</div>
-                                <div>{`${stat.value}`}</div>
-                              </div>
-                            ))}
-                          </div>
-                          <div className="bg-slate-400	 w-32 h-24 rounded flex items-center justify-center text-sm">Passing Yards</div>
-                          <div className="flex flex-wrap justify-around items-center w-full mb-2">
-                            {under_stats.map((stat, index) => (
-                              <div key={index} className="text-sm flex flex-col items-center p-2 mt-2">
-                                <div>{`${stat.key}:`}</div>
-                                <div>{`${stat.value}`}</div>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+    <div className="bg-transparent flex flex-wrap items-center" style={{ gap: '0px' }}>
+      {player.stat.map((statItem, idx) => (
+        <div key={idx} className="border-pink-500 rounded-xl px-24 py-8 flex flex-col items-center justify-center text-center" style={{ marginRight: '-2px', marginLeft: '-2px' }}>
+          <div className="flex flex-wrap justify-around items-center w-full mb-2">
+            {over_stats.map((stat, index) => (
+              <div key={index} className="text-sm flex flex-col items-center p-2">
+                <div>{`${stat.key}:`}</div>
+                <div>{`${stat.value}`}</div>
+              </div>
+            ))}
+          </div>
+                          <div className="bg-slate-400 w-32 h-24 rounded flex items-center justify-center text-sm">
+            {`${statItem.stat}: ${statItem.Stat_Value} (${statItem.Over_Under})`}
+              </div>
+              <div className="flex flex-wrap justify-around items-center w-full mb-2">
+                {under_stats.map((stat, index) => (
+                  <div key={index} className="text-sm flex flex-col items-center p-2 mt-2">
+                    <div>{`${stat.key}:`}</div>
+                    <div>{`${stat.value}`}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
                     <ul className="text-gray-400 mt-2">
-                    {renderStatsTable(player)}
+                      {renderStatsTable(player)}
                     </ul>
                   </>
                 )}
@@ -253,9 +320,10 @@ const PlayerAnalysis = () => {
             ))
           )}
         </div>
-      ))}
-    </div>
-  );
+      ))
+    ))}
+  </div>
+);
 };
 
 export default PlayerAnalysis;
