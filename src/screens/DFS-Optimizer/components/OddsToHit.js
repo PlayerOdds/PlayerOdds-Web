@@ -3,16 +3,19 @@ import { playersData } from "./newdata";
 
 const OddsToHit = ({odds, oddsValue }) => {
   return (
-    <div className="flex flex-col bg-purple-700 items-center space-y-2">
-      <div className="px-4 py-1 rounded">
-        <span className="text-sm">ODDS TO HIT</span>
+   <div className='text-center '>
+   
+    <div className="flex flex-col text-center bg-green-600 justify-center items-center space-y-2 rounded-xl p-1  sm:w- md:w-32 lg:w-36">
+    <div className="">
+        <span className="text-white text-xs text-bold sm:text-s md:text-sm ">ODDS TO HIT</span> {/* `text-center` is optional here due to flex settings */}
       </div>
-      <div className="px-4 py-1 rounded">
-        <span className="text-sm">{odds}</span>
+      <div className="">
+        <span className="text-s font-bold sm:text-sm md:text-lg">{odds}</span> {/* `text-center` added for consistency, optional if flex settings are enough */}
       </div>
-      <div className="px-4 py-1 rounded">
-        <span className="text-sm">{oddsValue}</span>
+      <div className="">
+        <span className="text-xs  sm:text-s md:text-lg">{oddsValue}</span> {/* `text-center` added for consistency, optional if flex settings are enough */}
       </div>
+    </div>
     </div>
   )
 }
