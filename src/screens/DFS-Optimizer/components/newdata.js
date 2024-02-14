@@ -1,8 +1,5 @@
-<<<<<<< HEAD
+
 import { PrizPicksLogo, FanDuel, Bovada, DraftKingsLogo, BetMGM,Pinnacle,Barstool } from "../../../images/ImageRepository";
-=======
-//This will become an API service file when the backend is built out
->>>>>>> 4affbd4e3689652091480cddb15401a4a9ff7917
 
 export const playersData = [
   {

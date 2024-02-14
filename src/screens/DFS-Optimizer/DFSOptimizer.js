@@ -40,7 +40,7 @@ export default function BasicTable() {
     </TableContainer>
     
    
-<<<<<<< HEAD
+
     <div className="bg-gray-900 p-4">
   {playersData.map((player, idx) => (
     <div key={idx} className="bg-gray-800 text-white p-3 my-2 rounded-lg">
@@ -48,12 +48,7 @@ export default function BasicTable() {
 
         {/* PlayerInfo component */}
         <div className="flex flex-col mb-3 items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
-=======
-  <div className="bg-gray-900 p-4">
-    {playersData.map((player, idx) => (
-      <div key={idx} className="bg-gray-800 text-white p-4 my-2 rounded-lg">
-        <div className="grid grid-cols-5 gap-2"> 
->>>>>>> 4affbd4e3689652091480cddb15401a4a9ff7917
+
           <PlayerInfo name={player.name} teamInfo={player.teamInfo} matchup={player.matchup}/>
         </div>
 
@@ -72,14 +67,10 @@ export default function BasicTable() {
           <Platform platforms={player.platforms} />
         </div>
       </div>
-<<<<<<< HEAD
+
     </div>
   ))}
 </div>
-=======
-    ))}
-  </div>
->>>>>>> 4affbd4e3689652091480cddb15401a4a9ff7917
   </>
 );
 }
