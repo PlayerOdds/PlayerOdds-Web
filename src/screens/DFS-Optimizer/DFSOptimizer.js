@@ -63,7 +63,7 @@ export default function BasicTable() {
 
 
         {/* Platform component */}
-        <div className="flex overflow-x-scroll items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+        <div className="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
           <Platform platforms={player.platforms} />
         </div>
       </div>
