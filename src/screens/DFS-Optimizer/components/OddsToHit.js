@@ -4,7 +4,7 @@ const OddsToHit = ({ odds, oddsValue }) => {
   return (
     <div className='text-center'>
       
-      <div className="border flex flex-col bg justify-center items-center space-y-2 rounded-xl p-0.5 w-28"> {/* Adjusted width and padding for a slightly smaller size without affecting text size */}
+      <div className=" flex flex-col bg justify-center items-center space-y-2 rounded-xl p-0.5 w-28"> {/* Adjusted width and padding for a slightly smaller size without affecting text size */}
         <div className="">
         
           <span className="text-white text-xs font-bold">ODDS TO HIT</span>

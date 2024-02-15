@@ -4,7 +4,7 @@ import React from "react";
 
 const Platform = ({ platforms }) => {
   return (
-    <div className="border flex overflow-x-auto gap-3 mt-2">
+    <div className="flex overflow-x-auto gap-3 mt-2">
       {platforms.map((platform, index) => (
         <div key={index} className="flex-col bg-gray-700 px-2 py-1 rounded flex justify-between items-center min-w-max">
           {/* Adjust the image height and width with breakpoints */}

@@ -27,25 +27,12 @@ export default function BasicTable() {
 
 
  return (
-  <>
-    <TableContainer component={Paper} sx={{ maxWidth: '100%', margin: 'auto', boxShadow: 3, background: '#0f1a1b' }}>
 
-      <TableFilter/>
-      <Table sx={{ minWidth: 100 }} aria-label="simple table">
-        <TableHeaderComponent />
-        <TableBody>
-          {filteredRows.map((row) => (
-            <TableRowComponent key={row.name} row={row} />
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-    
    
-
-    <div className="bg-gray-900 p-4">
+  <div className='flex justify-center content-center'>
+  <div className=" p-4  flex-col">
   {playersData.map((player, idx) => (
-    <div key={idx} className="bg-gray-800 text-white p-3 my-2 rounded-lg">
+    <div key={idx} className=" bg-[#1f232a] px-5 text-white max-w-[1800px] mb-5 rounded-lg">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-1 items-center">
 
         {/* PlayerInfo component */}
@@ -56,7 +43,7 @@ export default function BasicTable() {
 
         {/* Combined container for PlayerLine, OverUnder, and OddsToHit */}
         {/* Centered vertically and horizontally on small screens, spaced evenly on large screens */}
-        <div className="border text-center flex flex-row items-center justify-between sm:space-x-1 p-1 col-span-1 md:col-span-3 lg:col-span-2">
+        <div className="text-center flex flex-row items-center justify-between sm:space-x-1 p-1 col-span-1 md:col-span-3 lg:col-span-2">
           <PlayerLine line={player.line} betType={player.betType}/>
           <OverUnder pick={player.pick}/>
           <OddsToHit odds={player.odds} oddsValue={player.oddsValue}/>
@@ -72,6 +59,6 @@ export default function BasicTable() {
     </div>
   ))}
 </div>
-  </>
+</div>
 );
 }
