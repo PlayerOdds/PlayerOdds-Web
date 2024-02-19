@@ -30,6 +30,10 @@ import WNBA from './content/WNBA.png'
 import ATP from './content/ATP.png'
 import WTA from './content/WTA.png'
 import ITF from './content/ITF.png'
+import Purdy from './content/Purdy.png'
+import Mahomes from './content/Mahomes.png'
+import Niners from './content/49ers.png'
+import Chiefs from './content/Cheifs.png'
 
 export {
   DraftKingsLogo,
@@ -64,5 +68,9 @@ export {
   ATP,
   WTA,
   ITF,
-
+  Purdy,
+  Mahomes,
+  Niners,
+  Chiefs,
+  
  };

@@ -1,3 +1,5 @@
+import {Mahomes, Purdy} from '../../../images/ImageRepository'
+
 export const games = [
   {
     league: 'NFL',
@@ -10,6 +12,7 @@ export const games = [
       players: [
         {
           name: 'Brock Purdy - SF',
+          image: Purdy, 
           stat:[
             {
               book:'PrizePicks',
@@ -102,6 +105,7 @@ export const games = [
         },
         {
           name: 'Patrick Mahomes - KC',
+          image: Mahomes, 
           game: 'KC vs SF 5pm', 
           teamInfo: 'NFL / KC ',
           stat:[

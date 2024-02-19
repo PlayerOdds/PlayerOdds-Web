@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import {games} from './components/gamesData'
-import PlayerDetails from "./components/PlayerDetails"; // Adjust the path as necessary
+import { games } from './components/gamesData';
+import Player from "./components/Player";
+import { Niners, Chiefs, Purdy, Mahomes } from "../../images/ImageRepository";
 
 const PlayerAnalysis = () => {
   const [openGameId, setOpenGameId] = useState(null);
@@ -19,14 +20,21 @@ const PlayerAnalysis = () => {
       {games.map((gameEntry) => (
         gameEntry.todays_games.map((game) => (
           <div key={game.id} className="p-4 border rounded-lg shadow-lg">
-            <div className="font-bold text-lg cursor-pointer text-white" onClick={() => toggleGame(game.id)}>
-              {game.title} <span className="text-sm font-normal">{game.date}</span>
+            <div className="flex items-center gap-2">
+              <img src={Niners} style={{ maxHeight: '50px', maxWidth: '50px' }} alt="Niners"/>
+              <img src={Chiefs} style={{ maxHeight: '50px', maxWidth: '50px' }} alt="Chiefs"/>
+              <div className="font-bold text-lg cursor-pointer text-white" onClick={() => toggleGame(game.id)}>
+                {game.title} <span className="text-sm font-normal">{game.date}</span>
+              </div>
             </div>
             {openGameId === game.id && (
               game.players.map((player, index) => (
-                <div key={index} className="cursor-pointer mt-2" onClick={() => togglePlayer(player.name)}>
-                  {openPlayerName === player.name ? <PlayerDetails player={player} /> : <div className="p-4 text-white">{player.name}</div>}
-                </div>
+                <Player 
+                  key={index} 
+                  player={player} 
+                  togglePlayer={togglePlayer} 
+                  openPlayerName={openPlayerName} 
+                />
               ))
             )}
           </div>
