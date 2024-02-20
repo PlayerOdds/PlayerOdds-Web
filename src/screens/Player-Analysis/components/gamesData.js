@@ -1,4 +1,4 @@
-import {Mahomes, Purdy} from '../../../images/ImageRepository'
+import {Mahomes, Purdy, Niners, Chiefs} from '../../../images/ImageRepository'
 
 export const games = [
   {
@@ -13,6 +13,7 @@ export const games = [
         {
           name: 'Brock Purdy - SF',
           image: Purdy, 
+          teamLogo: Niners,
           stat:[
             {
               book:'PrizePicks',
@@ -34,7 +35,7 @@ export const games = [
             },
           {
               book:'PrizePicks',
-              stat: "Passing Touchdowns",
+              stat: "Passing TD's",
               Stat_Value: "1.5",
               Over_Under: "Under"
             },
@@ -106,6 +107,7 @@ export const games = [
         {
           name: 'Patrick Mahomes - KC',
           image: Mahomes, 
+          teamLogo: Chiefs,
           game: 'KC vs SF 5pm', 
           teamInfo: 'NFL / KC ',
           stat:[
@@ -129,7 +131,7 @@ export const games = [
           },
         {
             book:'PrizePicks',
-            stat: "Passing Touchdowns",
+            stat: "Passing TD's",
             Stat_Value: "1.5",
             Over_Under: "Under"
           },
