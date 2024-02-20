@@ -4,7 +4,7 @@ import { PrizPicksLogo, FanDuel, Bovada, DraftKingsLogo, BetMGM,Pinnacle,Barstoo
 export const playersData = [
   {
       name: 'Josh Giddey',
-      playerImage: '', //Please look at the gamesData file and restructure this
+      playerImage: '', //Please look at the gamesData file and restructure this to make sure it will work when we incorperate out new backend
       teamInfo: 'NBA / OKC ',
       matchup: 'OKC @ ORL - 2/13 7:30 PM ET',
       betType: 'POINTS + REBOUNDS',
