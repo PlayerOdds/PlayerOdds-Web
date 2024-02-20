@@ -10,10 +10,10 @@ const OverUnder = ({ pick }) => {
   const borderColorClass = isOver ? 'border-[#1b3239]' : 'border-[#322233]';
 
   // Combine all classes with responsive design adjustments
-  const combinedClasses = `rounded-xl text-center inline-block border-2 ${bgColorClass} ${textColorClass} ${borderColorClass} p-5 sm:p-2 md:p-5`;
+  const combinedClasses = `rounded-xl text-center inline-block border-2 ${bgColorClass} ${textColorClass} ${borderColorClass} p-3 md:p-4`;
 
   // Responsive text size
-  const textSizeClass = "text-xs sm:text-sm md:text-l";
+  const textSizeClass = "text-xs sm:text-sm md:text-xs";
 
   return (
     <div className="flex flex-col justify-center items-center space-y-2">

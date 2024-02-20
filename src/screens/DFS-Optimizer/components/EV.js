@@ -10,7 +10,7 @@ const EV = ({ ev }) => {
           </div>
           <div className="">
               {/* Keeping original color and adjusting size for consistency */}
-              <span className="text-s font-bold text-[#6ae487] sm:text-sm md:text-lg">{ev}%</span> 
+              <span className="text-sm font-bold text-[#6ae487] sm:text-sm md:text-base">{ev}%</span> 
           </div>
 
       </div>
