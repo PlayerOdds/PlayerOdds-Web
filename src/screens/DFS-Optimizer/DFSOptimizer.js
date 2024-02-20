@@ -32,7 +32,7 @@ export default function BasicTable() {
   <div className='flex justify-center content-center'>
   <div className=" p-4  flex-col">
   {playersData.map((player, idx) => (
-    <div key={idx} className=" bg-[#1f232a] px-5 text-white max-w-[1800px] mb-3 rounded-lg">
+    <div key={idx} className=" bg-[#242633] px-5 text-white max-w-[1800px] mb-3 rounded-lg">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-1 items-center">
 
         {/* PlayerInfo component */}
