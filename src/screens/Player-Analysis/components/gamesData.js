@@ -411,7 +411,7 @@ export const games = [
     league: 'NFL',
     todays_games:[
       { 
-      id: 'game2',
+      id: 'game7',
       title: 'San Francisco 49ers at Kansas City Chiefs',
       teamInfo: 'NFL / SF ',
       date: '2/11 - 6:30 PM EST',
