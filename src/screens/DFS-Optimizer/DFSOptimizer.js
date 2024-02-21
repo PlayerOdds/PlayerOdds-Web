@@ -23,7 +23,7 @@ export default function BasicTable() {
         {/* PlayerInfo component */}
         <div className="flex flex-col mb-2 items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
 
-          <PlayerInfo name={player.name} teamInfo={player.teamInfo} matchup={player.matchup}/>
+          <PlayerInfo playerImage={player.playerImage} name={player.name} teamInfo={player.teamInfo} matchup={player.matchup}/>
         </div>
 
         {/* Combined container for PlayerLine, OverUnder, and OddsToHit */}
