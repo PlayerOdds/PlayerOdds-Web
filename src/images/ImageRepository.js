@@ -34,6 +34,8 @@ import Purdy from './content/Purdy.png'
 import Mahomes from './content/Mahomes.png'
 import Niners from './content/49ers.png'
 import Chiefs from './content/Cheifs.png'
+import Giddy from './content/JoshG.webp'
+
 
 export {
   DraftKingsLogo,
@@ -72,5 +74,5 @@ export {
   Mahomes,
   Niners,
   Chiefs,
-  
+  Giddy,
  };

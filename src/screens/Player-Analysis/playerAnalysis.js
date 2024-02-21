@@ -16,10 +16,10 @@ const PlayerAnalysis = () => {
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 mx-auto" style={{ maxWidth: '1700px', width: '100%', padding: '20px', boxSizing: 'border-box' }}>
       {games.map((gameEntry) => (
         gameEntry.todays_games.map((game) => (
-          <div key={game.id} className="p-4 border rounded-lg shadow-lg">
+          <div key={game.id} className="p-4 border bg-[#181a24ab] rounded-lg shadow-lg ">
             <div className="flex items-center gap-2">
               <img src={Niners} style={{ maxHeight: '50px', maxWidth: '50px' }} alt="Niners"/>
               <img src={Chiefs} style={{ maxHeight: '50px', maxWidth: '50px' }} alt="Chiefs"/>

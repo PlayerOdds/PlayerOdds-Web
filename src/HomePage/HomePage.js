@@ -6,6 +6,9 @@ import Pricing from '../screens/Pricing/pricing.js';
 import DFSOptimizer from '../screens/DFS-Optimizer/DFSOptimizer.js';
 import PlayerAnalysis from '../screens/Player-Analysis/playerAnalysis.js';
 
+//sports betting is mire fun when you win
+
+//You dont have to be a pro to bet like one
 
 
 const AppRouting = () => {
