@@ -15,7 +15,7 @@ export default function BasicTable() {
 
    
   <div className='flex justify-center content-center'>
-  <div className=" p-1  flex-col">
+  <div className=" p-0.5 flex-col">
   {playersData.map((player, idx) => (
     <div key={idx} className=" bg-[#181a24ab] p-3 text-white max-w-[1500px] mb-1.5 rounded-2xl">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-1 items-center">
