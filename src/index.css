@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background: #132c2a; /*radial-gradient(circle at center, #07412f, #000303f1);  Radial gradient from #31333f to #000300 */
+  background: #020211; /*radial-gradient(circle at center, #07412f, #000303f1);  Radial gradient from #31333f to #000300 */
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

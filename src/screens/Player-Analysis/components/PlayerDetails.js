@@ -2,8 +2,8 @@ import React from 'react';
 import StatsTable from './StatsTable';
 
 const over_stats = [
-  { key: "L5", value: "60%" },
-  { key: "L10", value: "60%" },
+  { key: "L5", value: "34%" },
+  { key: "L10", value: "20%" },
   { key: "SZN", value: "50%" },
   { key: "H2H", value: "75%" },
 ];
@@ -67,9 +67,9 @@ const PlayerDetails = ({ player }) => (
             <div className="bg-slate-500 w-36 h-24 rounded flex flex-col items-center justify-center text-sm">
               <div className='text-white mb-2'>{statItem.stat}</div>
               <div className='text-yellow-400 text-xl'>{`${statItem.Stat_Value}`}</div>
-              <div className={statItem.Over_Under === 'Over' ? 'text-green-500 text-lg' : 'text-red-600 text-lg'}>
+              {/* <div className={statItem.Over_Under === 'Over' ? 'text-green-500 text-lg' : 'text-red-600 text-lg'}>
                 {statItem.Over_Under}
-              </div>
+              </div> */}
             </div>
             {/* <div className="bg-[#1f232a] rounded-xl flex justify-around items-center w-full mt-2 mb-2">
               {under_stats.map((stat, index) => (
