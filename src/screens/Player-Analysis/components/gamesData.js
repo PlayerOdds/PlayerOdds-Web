@@ -19,37 +19,37 @@ export const games = [
               book:'PrizePicks',
               stat: "Passing Yards",
               Stat_Value: "276.5",
-              Over_Under: "Over"
+           
             },
           {
               book:'PrizePicks',
               stat: "Rushing Yards",
               Stat_Value: "27.5",
-              Over_Under: "Under"
+     
             },
             {
               book:'PrizePicks',
               stat: "Completions",
               Stat_Value: "276.5",
-              Over_Under: "Over"
+   
             },
           {
               book:'PrizePicks',
               stat: "Passing TD's",
               Stat_Value: "1.5",
-              Over_Under: "Under"
+        
             },
             {
               book:'PrizePicks',
               stat: "Total Touchdowns",
               Stat_Value: "2.5",
-              Over_Under: "Over"
+         
             },
           {
               book:'PrizePicks',
               stat: "Turnover",
               Stat_Value: "0.5",
-              Over_Under: "Under"
+    
             }
           ],
           previousGames: ['300 yards, 3 TDs', '250 yards, 2 TDs'],
