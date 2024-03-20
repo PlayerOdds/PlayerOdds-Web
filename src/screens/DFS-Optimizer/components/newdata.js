@@ -24,6 +24,11 @@ export const playersData = [
         
       ],
       best_platform:PrizPicksLogo,
+      last_5:'20%',
+      last_10: '45%',
+      SZN_avg: '35%',
+      Vs_Opponent: '50%',
+
     },
  {
       name: 'Josh Giddey',
@@ -70,6 +75,11 @@ export const playersData = [
         
       ],
       best_platform:PrizPicksLogo,
+      last_5:'60%',
+      last_10: '45%',
+      SZN_avg: '85%',
+      Vs_Opponent: '49%',
+
     },
  {
       name: 'Josh Giddey',
