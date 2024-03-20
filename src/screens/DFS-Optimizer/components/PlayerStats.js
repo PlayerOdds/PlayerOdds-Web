@@ -1,22 +1,47 @@
 const PlayerStats = ({ last5, last10, sznAvg, vsOpponent }) => {
-  // Helper function to determine the background color based on value
-  const backgroundColor = (value) => {
-    const numValue = parseFloat(value); // Ensure the value is treated as a number
-    return numValue > 50 ? '#6ae487' : '#2a192b'; // Green or specific shade of red
+  
+  const determineStyle = (value) => {
+    // Check if the value is null first
+    if (value === null) {
+      return {
+        backgroundColor: '#222431',
+        color: '#d3d3d3',
+        borderTop: '2px solid transparent', // Use transparent border for null values or consider using #444444 if needed
+      };
+    }
+
+    const numValue = parseFloat(value);
+    let bgColor, txtColor, borderColor;
+
+    if (numValue > 20 && numValue < 80) {
+      bgColor = '#222431'; 
+      txtColor = '#d3d3d3';
+      borderColor = 'transparent'; // Was '#transparent' before, corrected to 'transparent'
+    } else if (numValue > 50) {
+      bgColor = '#6ae487'; 
+      txtColor = '#1a472a'; 
+      borderColor = '#00FF00'; 
+    } else {
+      bgColor = '#2a192b'; 
+      txtColor = '#ee3a4a'; 
+      borderColor = '#FF0000'; 
+    }
+
+    return {
+      backgroundColor: bgColor,
+      color: txtColor,
+      borderTop: `2px solid ${borderColor}`,
+    };
   };
 
-  // New helper function to determine the text color based on the background color
-  const textColor = (value) => {
-    const numValue = parseFloat(value);
-    return numValue > 50 ? '#1a472a' : '#ee3a4a'; // Darker green for text on green, brighter red for text on red
-  };
+  const formatValue = (value) => value === null ? '-' : value;
 
   return (
-    <div className="flex flex-row items-left justify-start text-left mb-2">
-      <div className="mr-4" style={{ backgroundColor: backgroundColor(last5), color: textColor(last5) }}>Last 5: {last5}</div>
-      <div className="mr-4" style={{ backgroundColor: backgroundColor(last10), color: textColor(last10) }}>Last 10: {last10}</div>
-      <div className="mr-4" style={{ backgroundColor: backgroundColor(sznAvg), color: textColor(sznAvg) }}>Season Avg: {sznAvg}</div>
-      <div style={{ backgroundColor: backgroundColor(vsOpponent), color: textColor(vsOpponent) }}>Vs: {vsOpponent}</div>
+    <div className="flex flex-row items-left justify-start text-left mb-2 rounded-b-xl" style={{ borderTop: '2px solid #444444', backgroundColor: '#222431' }}>
+      <div className="p-1 pl-4 text-sm pr-4 rounded-bl-xl" style={determineStyle(last5)}>L5: {formatValue(last5)}</div>
+      <div className="p-1 pl-4 text-sm pr-4" style={determineStyle(last10)}>L10: {formatValue(last10)}</div>
+      <div className="p-1 pl-4 text-sm pr-4" style={determineStyle(sznAvg)}>SZN: {formatValue(sznAvg)}</div>
+      <div className="p-1 pl-4 text-sm pr-4 rounded-br-xl" style={determineStyle(vsOpponent)}>H2H: {formatValue(vsOpponent)}</div>
     </div>
   );
 };

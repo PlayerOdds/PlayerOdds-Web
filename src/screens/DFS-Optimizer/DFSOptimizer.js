@@ -37,7 +37,7 @@ export default function BasicTable() {
                 </div>
               </div>
               {/* PlayerStats component directly follows player's main info */}
-              <div className="bg-[#181a24ab] text-white max-w-[450px] mt-1 pl-4">
+              <div className="bg-transparent text-white max-w-[377px]">
                 <PlayerStats 
                   last5={player.last_5}
                   last10={player.last_10}
