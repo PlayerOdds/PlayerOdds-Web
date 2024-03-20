@@ -35,6 +35,12 @@ import Mahomes from './content/Mahomes.png'
 import Niners from './content/49ers.png'
 import Chiefs from './content/Cheifs.png'
 import Giddy from './content/JoshG.webp'
+import LA from './content/LA.png'
+import MIN from './content/MIN.png'
+import Mats from './content/Mats.png'
+import MIA from './content/MIA.png'
+import CLE from './content/CLE.png'
+import Butler from './content/Butler.png'
 
 
 export {
@@ -75,4 +81,10 @@ export {
   Niners,
   Chiefs,
   Giddy,
+  LA,
+  MIN,
+  Mats,
+  Butler,
+  MIA,
+  CLE
  };

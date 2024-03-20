@@ -29,8 +29,8 @@ const PlayerAnalysis = () => {
         gameEntry.todays_games.map((game) => (
           <div key={game.id} className="p-4 border bg-[#181a24ab] rounded-lg shadow-lg ">
             <div className="flex items-center gap-2">
-              <img src={Niners} style={{ maxHeight: '50px', maxWidth: '50px' }} alt="Niners"/>
-              <img src={Chiefs} style={{ maxHeight: '50px', maxWidth: '50px' }} alt="Chiefs"/>
+              <img src={game.away} style={{ maxHeight: '50px', maxWidth: '50px' }} alt="Niners"/>
+              <img src={game.home} style={{ maxHeight: '50px', maxWidth: '50px' }} alt="Chiefs"/>
               <div className="font-bold text-lg cursor-pointer text-white" onClick={() => toggleGame(game.id)}>
                 {game.title} <span className="text-sm font-normal">{game.date}</span>
               </div>
@@ -39,9 +39,10 @@ const PlayerAnalysis = () => {
               game.players.map((player, index) => (
                 <Player 
                   key={index} 
-                  player={player} 
+                  player={player}
+                  activeLeague={activeLeague} // Add this line
                   togglePlayer={togglePlayer} 
-                  openPlayerName={openPlayerName} 
+                  openPlayerName={openPlayerName}
                 />
               ))
             )}
