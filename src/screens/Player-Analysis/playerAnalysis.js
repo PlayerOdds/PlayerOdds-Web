@@ -40,7 +40,7 @@ const PlayerAnalysis = () => {
                 <Player 
                   key={index} 
                   player={player}
-                  activeLeague={activeLeague} // Add this line
+                  activeLeague={activeLeague} 
                   togglePlayer={togglePlayer} 
                   openPlayerName={openPlayerName}
                 />

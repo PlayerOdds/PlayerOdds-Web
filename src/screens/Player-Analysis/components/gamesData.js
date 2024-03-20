@@ -1,7 +1,7 @@
 import {Mahomes, Purdy, Niners, Chiefs, Mats, MIN, Butler, MIA, LA, CLE} from '../../../images/ImageRepository'
 
 export const games = [
-  {
+  { 
     league: 'NBA',
     todays_games:[
       { 
@@ -16,6 +16,10 @@ export const games = [
           name: 'Jimmy Butler - MIA',
           image: Butler, 
           teamLogo: MIA,
+          teamColors: {
+            primary: '#98002E', 
+            secondary: '#181a24ab' 
+          },
           stat:[
             {
               book:'PrizePicks',
@@ -126,6 +130,10 @@ export const games = [
           name: 'Brock Purdy - SF',
           image: Purdy, 
           teamLogo: Niners,
+          teamColors: {
+            primary: '#AA0000', 
+            secondary: '#181a24ab' 
+          },
           stat:[
             {
               book:'PrizePicks',
@@ -220,6 +228,10 @@ export const games = [
           name: 'Patrick Mahomes - KC',
           image: Mahomes, 
           teamLogo: Chiefs,
+          teamColors: {
+            primary: '#E31837', 
+            secondary: '#181a24ab' 
+          },
           game: 'KC vs SF 5pm', 
           teamInfo: 'NFL / KC ',
           stat:[
@@ -333,6 +345,10 @@ export const games = [
           name: 'Mats Zuccarello - SF',
           image: Mats, 
           teamLogo: MIN,
+          teamColors: {
+            primary: '#154734', 
+            secondary: '#181a24ab' 
+          },
           stat:[
             {
               book:'PrizePicks',
@@ -369,7 +385,8 @@ export const games = [
               stat: "Turnover",
               Stat_Value: "0.5",
               Over_Under: "Under"
-            }
+            },
+            
           ],
           previousGames: ['300 yards, 3 TDs', '250 yards, 2 TDs'],
           season:[{
