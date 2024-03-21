@@ -36,7 +36,7 @@ const TWNavBar = () => {
             <div className='md:px-3 py-1 px-3 md:flex justify-between items-center bg-transparent'>
                 <div className='flex text-2xl cursor-pointer items-center gap-2'>
                     <Link to="/">
-                        <img src={LogoBanner} alt='OddsAlert' className='transition object-scale-down h-20 w-auto hover:scale-105' />
+                        <img src={LogoBanner} alt='OddsAlert' className='mt-2 transition object-scale-down h-14 w-auto hover:scale-100' />
                     </Link>
                 </div>
 
