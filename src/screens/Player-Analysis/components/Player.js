@@ -1,7 +1,7 @@
 import React from 'react';
 import PlayerDetails from "./PlayerDetails";
 
-const Player = ({ player, togglePlayer, openPlayerName }) => {
+const Player = ({ player, togglePlayer, openPlayerName, activeLeague }) => {
   const backgroundStyle = player.teamColors ? 
     `linear-gradient(to right, ${player.teamColors.primary} 0%, ${player.teamColors.primary} 5%, ${player.teamColors.secondary} 30%, ${player.teamColors.secondary} 100%)` : 
     'linear-gradient(to right, #930d11 0%, #930d11 5%, #181a24ab 30%, #181a24ab 100%)'; 
@@ -47,7 +47,7 @@ const Player = ({ player, togglePlayer, openPlayerName }) => {
 
         <div>{player.name}</div>
       </div>
-      {openPlayerName === player.name && <PlayerDetails player={player} />}
+      {openPlayerName === player.name && <PlayerDetails player={player} sport={activeLeague} />}
     </div>
   );
 };

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { games } from './components/gamesData';
 import Player from "./components/Player";
-import { Niners, Chiefs, Purdy, Mahomes } from "../../images/ImageRepository";
 
 const PlayerAnalysis = () => {
   const [openGameId, setOpenGameId] = useState(null);
