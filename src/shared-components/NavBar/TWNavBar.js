@@ -35,7 +35,7 @@ const TWNavBar = () => {
         <header className='bg-transparent overflow-hidden w-full top-0 left-0 mb-10 z-50'>
             <div className='md:px-3 py-1 px-3 md:flex justify-between items-center bg-transparent'>
                 <div className='flex text-2xl cursor-pointer items-center gap-2'>
-                    <Link to="/">
+                    <Link to="/"> 
                         <img src={LogoBanner} alt='OddsAlert' className='mt-2 transition object-scale-down h-14 w-auto hover:scale-100' />
                     </Link>
                 </div>
