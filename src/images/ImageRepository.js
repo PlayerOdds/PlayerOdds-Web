@@ -41,7 +41,16 @@ import Mats from './content/Mats.png'
 import MIA from './content/MIA.png'
 import CLE from './content/CLE.png'
 import Butler from './content/Butler.png'
-
+import Crosby from './content/sidney-crosby.png'
+import PIT from './content/PIT.png'
+import DAL from './content/DAL.png'
+import seguin from './content/tyler-seguin.png'
+import Robertson from './content/jason-robertson.png'
+import Malkin from './content/evgeni-malkin.png'
+import TWolves from './content/TWolves.png'
+import Garland from './content/darius-garland.png'
+import Levert from './content/caris-levert.png'
+import Edwards from './content/anthony-edwards.png'
 
 export {
   DraftKingsLogo,
@@ -86,5 +95,15 @@ export {
   Mats,
   Butler,
   MIA,
-  CLE
+  CLE,
+  Crosby,
+  PIT,
+  DAL,
+  seguin,
+  Robertson,
+  Malkin,
+  TWolves,
+  Garland,
+  Levert,
+  Edwards,
  };
