@@ -14,7 +14,15 @@ export const games = [
       title: 'Miami Heat at Cleveland Cavaliers',
       teamInfo: 'NBA / MIA ',
       home: CLE,
+      hometeamColors: {
+        primary: '#6F263D', 
+        secondary: '#181a24ab' 
+      },
       away: MIA,
+      awayteamColors: {
+        primary: '#98002E', 
+        secondary: '#181a24ab' 
+      },
       date: '3/20 - 7:00 PM EDT',
       players: [
         {
@@ -182,7 +190,15 @@ export const games = [
       title: 'Cleveland Cavaliers at Minnesota Timberwolves',
       teamInfo: 'NBA / MIA ',
       home: TWolves,
+      hometeamColors: {
+        primary: '#0C2340', 
+        secondary: '#181a24ab' 
+      },
       away: CLE,
+      awayteamColors: {
+        primary: '#6F263D', 
+        secondary: '#181a24ab' 
+      },
       date: '3/22 - 8:00 PM EDT',
       players: [
         {
@@ -829,7 +845,15 @@ export const games = [
       title: 'San Francisco 49ers at Kansas City Chiefs',
       teamInfo: 'NFL / SF ',
       home: Chiefs,
+      hometeamColors: {
+        primary: '#E31837', 
+        secondary: '#181a24ab' 
+      },
       away: Niners,
+      awayteamColors: {
+        primary: '#AA0000', 
+        secondary: '#181a24ab' 
+      },
       date: '2/11 - 6:30 PM EST',
       players: [
         {
@@ -1091,7 +1115,15 @@ export const games = [
       id: 'game1',
       title: 'Minnesota Wild at Los Angeles Kings',
       home: LA,
+      hometeamColors:{
+        primary: '#111111',
+        secondary: '#181a24ab' 
+      },
       away: MIN,
+      awayteamColors: {
+        primary: '#154734', 
+        secondary: '#181a24ab' 
+      },
       teamInfo: 'NHL / MIN ',
       date: '3/20 - 10:00 PM EDT',
       players: [
@@ -1206,7 +1238,15 @@ export const games = [
       id: 'game2',
       title: 'Pittsburgh Penguins at Dallas Stars',
       home: DAL,
+      hometeamColors:{
+        primary: '#006847',
+        secondary:'#181a24ab' 
+      },
       away: PIT,
+      awayteamColors:{
+        primary: '#000000',
+        secondary:'#181a24ab' 
+      },
       teamInfo: 'NHL / MIN ',
       date: '3/22 - 8:00 PM EDT',
       players: [
@@ -1216,7 +1256,7 @@ export const games = [
           image: Crosby, 
           teamLogo: PIT,
           teamColors: {
-            primary: '#FCB514', 
+            primary: '#000000', 
             secondary: '#181a24ab' 
           },
           stat:[
@@ -1296,7 +1336,7 @@ export const games = [
           image: Malkin, 
           teamLogo: PIT,
           teamColors: {
-            primary: '#FCB514', 
+            primary: '#000000', 
             secondary: '#181a24ab' 
           },
           stat:[

@@ -17,6 +17,12 @@ const PlayerAnalysis = () => {
 
   const filteredGames = games.filter(game => game.league === activeLeague);
 
+  const defaultColors = {
+    primary: '#D3D3D3',
+    secondary: '#A9A9A9' 
+  };
+
+
   return (
     <div className="space-y-4 mx-auto" style={{ maxWidth: '1700px', width: '100%', padding: '20px', boxSizing: 'border-box' }}>
       <div className="buttons flex justify-start gap-4 mb-6">
@@ -26,10 +32,30 @@ const PlayerAnalysis = () => {
       </div>
       {filteredGames.map((gameEntry) => (
         gameEntry.todays_games.map((game) => (
-          <div key={game.id} className="p-4 border bg-[#181a24ab] rounded-lg shadow-lg ">
+          <div key={game.id} className="p-1 border bg-[#181a24ab] rounded-lg shadow-lg ">
             <div className="flex items-center gap-2">
-              <img src={game.away} style={{ maxHeight: '50px', maxWidth: '50px' }} alt="Niners"/>
-              <img src={game.home} style={{ maxHeight: '50px', maxWidth: '50px' }} alt="Chiefs"/>
+            <div style={{
+                  background: `linear-gradient(${game.awayteamColors?.primary || defaultColors.primary} 2%, ${game.awayteamColors?.secondary || defaultColors.secondary} 30%)`,
+                  padding: '10px', 
+                  borderRadius:'10px',
+                  display: 'inline-block'
+                }}>
+                  <img src={game.away} style={{ maxHeight: '50px', maxWidth: '50px' }} alt="Away Team"/>
+                </div>
+                <div className="text-white text-sm px-1 py-.5 rounded-full" style={{
+                  background: '#000000',
+                  margin: '0 -18px',
+                  zIndex: 1,
+                  position: 'relative'
+                }}>vs</div>
+                <div style={{
+                  background: `linear-gradient(${game.hometeamColors?.primary || defaultColors.primary} 2%, ${game.hometeamColors?.secondary || defaultColors.secondary} 30%)`,
+                  padding: '10px', 
+                  borderRadius:'10px',
+                  display: 'inline-block' 
+                }}>
+                  <img src={game.home} style={{ maxHeight: '50px', maxWidth: '50px' }} alt="Home Team"/>
+                </div>
               <div className="font-bold text-lg cursor-pointer text-white" onClick={() => toggleGame(game.id)}>
                 {game.title} <span className="text-sm font-normal">{game.date}</span>
               </div>
