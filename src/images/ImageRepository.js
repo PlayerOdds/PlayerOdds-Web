@@ -51,6 +51,8 @@ import TWolves from './content/TWolves.png'
 import Garland from './content/darius-garland.png'
 import Levert from './content/caris-levert.png'
 import Edwards from './content/anthony-edwards.png'
+import Wiggins from './content/andrew-wiggins.png'
+import Mbeng from './content/bez-mbeng.png'
 
 export {
   DraftKingsLogo,
@@ -106,4 +108,6 @@ export {
   Garland,
   Levert,
   Edwards,
+  Wiggins,
+  Mbeng,
  };
