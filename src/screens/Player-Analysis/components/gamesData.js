@@ -3,7 +3,7 @@ import {Mahomes, Purdy,
     Mats, MIN,
      Butler, MIA,
       LA, CLE,
-       Crosby, PIT, DAL, seguin, Robertson, Malkin, TWolves, Levert, Garland, Edwards} from '../../../images/ImageRepository'
+       Crosby, PIT, DAL, seguin, Robertson, Malkin, TWolves, Levert, Garland, Edwards, Gobert} from '../../../images/ImageRepository'
 
 export const games = [
   { 
@@ -660,7 +660,7 @@ export const games = [
         },
         {
           name: 'Rudy Gobert - C',
-          image: Edwards, 
+          image: Gobert, 
           teamLogo: TWolves,
           teamColors: {
             primary: '#0C2340', 

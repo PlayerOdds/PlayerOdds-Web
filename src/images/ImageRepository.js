@@ -53,6 +53,7 @@ import Levert from './content/caris-levert.png'
 import Edwards from './content/anthony-edwards.png'
 import Wiggins from './content/andrew-wiggins.png'
 import Mbeng from './content/bez-mbeng.png'
+import Gobert from './content/rudy-gobert.png'
 
 export {
   DraftKingsLogo,
@@ -110,4 +111,5 @@ export {
   Edwards,
   Wiggins,
   Mbeng,
+  Gobert,
  };
