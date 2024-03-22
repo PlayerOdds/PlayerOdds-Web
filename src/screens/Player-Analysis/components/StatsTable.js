@@ -48,35 +48,48 @@ const StatsTable = ({ player, sport }) => {
     <>
       <style>
         {`
+          .stats-table-wrapper {
+            overflow-x: auto;
+          }
           .no-vertical-borders th, .no-vertical-borders td {
-            border-left: none !important; /* Removes left borders */
-            border-right: none !important; /* Removes right borders */
-            border-bottom: 1px solid white; /* Keeps bottom border */
+            border-left: none !important;
+            border-right: none !important;
+            border-bottom: 1px solid white;
+          }
+          @media (max-width: 768px) {
+            .stats-table {
+              min-width: 600px;
+            }
+            .stats-table th, .stats-table td {
+              font-size: 12px; /* Smaller font size for table headers and cells */
+              padding: 8px 4px; /* Adjust padding to match the smaller font size */
+            }
           }
         `}
       </style>
-      <table className="min-w-full table-fixed text-center no-vertical-borders">
-        <thead>
-          <tr>
-            <th className="px-4 py-2 text-white"></th>
-            {currentSportMapping.map(({ label }) => (
-              <th key={label} className="px-4 py-2 text-white">{label}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {['season', 'last_10', 'last_5', 'previous', 'vs_opponent'].map((category) => (
-            <tr key={category}>
-              <td className="px-4 py-2 text-white">{category.toUpperCase()}</td>
-              {currentSportMapping.map(({ key }, index) => (
-                <td key={index} className="px-4 py-2 text-white">{player[category][0][key]}</td>
+      <div className="stats-table-wrapper">
+        <table className="stats-table min-w-full table-fixed text-center no-vertical-borders">
+          <thead>
+            <tr>
+              <th className="px-4 py-2 text-white"></th>
+              {currentSportMapping.map(({ label }) => (
+                <th key={label} className="px-4 py-2 text-white">{label}</th>
               ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {['season', 'last_10', 'last_5', 'previous', 'vs_opponent'].map((category) => (
+              <tr key={category}>
+                <td className="px-4 py-2 text-white">{category.toUpperCase()}</td>
+                {currentSportMapping.map(({ key }, index) => (
+                  <td key={index} className="px-4 py-2 text-white">{player[category][0][key]}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </>
   );
 };
-
 export default StatsTable;
