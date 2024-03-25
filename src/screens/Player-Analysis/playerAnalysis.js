@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { games } from './components/gamesData';
 import Player from "./components/Player";
+import { ArrowUpIcon, ArrowDownIcon } from '../../images/Icons';
+
 
 const PlayerAnalysis = () => {
   const [openGameId, setOpenGameId] = useState(null);
@@ -32,7 +34,7 @@ const PlayerAnalysis = () => {
       {filteredGames.map((gameEntry) => (
         gameEntry.todays_games.map((game) => (
           <div key={game.id} className="p-1 border bg-[#181a24ab] rounded-lg shadow-lg">
-            <div className="flex items-center gap-2 flex-wrap"> {/* Adjusted for wrapping */}
+            <div className="flex items-center gap-2 flex-wrap"> 
               <div style={{
                     background: `linear-gradient(${game.awayteamColors?.primary || defaultColors.primary} 2%, ${game.awayteamColors?.secondary || defaultColors.secondary} 30%)`,
                     padding: '10px', 
@@ -62,6 +64,9 @@ const PlayerAnalysis = () => {
                 <div className="text-sm text-white font-normal">
                   {game.date}
                 </div>
+                <div className="cursor-pointer ml-auto mr-4"> 
+                  {openGameId === game.id ? <ArrowUpIcon /> : <ArrowDownIcon />}
+                </div>
               </div>
             </div>
             {openGameId === game.id && (
@@ -73,9 +78,11 @@ const PlayerAnalysis = () => {
                   togglePlayer={togglePlayer} 
                   openPlayerName={openPlayerName}
                 />
+                
               ))
             )}
           </div>
+          
         ))
       ))}
     </div>

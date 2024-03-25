@@ -1,5 +1,6 @@
 import React from 'react';
 import PlayerDetails from "./PlayerDetails";
+import { ArrowUpIcon, ArrowDownIcon } from '../../../images/Icons';
 
 const Player = ({ player, togglePlayer, openPlayerName, activeLeague }) => {
   const backgroundStyle = player.teamColors ? 
@@ -46,6 +47,10 @@ const Player = ({ player, togglePlayer, openPlayerName, activeLeague }) => {
         </div>
 
         <div>{player.name}</div>
+
+        <div className="cursor-pointer ml-auto mr-4"> 
+          {openPlayerName === player.name ? <ArrowUpIcon /> : <ArrowDownIcon />}
+        </div>
       </div>
       {openPlayerName === player.name && <PlayerDetails player={player} sport={activeLeague} />}
     </div>
