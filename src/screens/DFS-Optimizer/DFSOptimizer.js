@@ -38,7 +38,7 @@ export default function BasicTable() {
                   <div className="flex flex-col mb-2 items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
                     <PlayerInfo playerImage={player.playerImage} name={player.name} teamInfo={player.teamInfo} matchup={player.matchup}/>
                   </div>
-                  <div className="text-center flex flex-row items-center justify-between sm:space-x-1 p-1 col-span-1 md:col-span-3 lg:col-span-2">
+                  <div className="text-center flex flex-row items-center justify-between sm:space-x-1 p-1 col-span-1 md:col-span-3 lg:col-span-2 overflow-x-auto"> {/* Add overflow-x-auto for horizontal scrolling */}
                     <PlayerLine line={player.line} betType={player.betType}/>
                     <OverUnder pick={player.pick}/>
                     <OddsToHit odds={player.odds} oddsValue={player.oddsValue}/>
