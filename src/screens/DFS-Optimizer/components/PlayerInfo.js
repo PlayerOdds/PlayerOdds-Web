@@ -7,7 +7,7 @@ const PlayerInfo = ({name, teamInfo, matchup, playerImage }) => {
       <div>
         <p className='text-l font-bold mb-1'>{name}</p>
         <p className="text-sm mb-1 sm:text-xs ">{teamInfo}</p>
-        <p className="text-sm">{matchup}</p>
+        <p className="text-xs">{matchup}</p>
       </div>
   </div>
   )
