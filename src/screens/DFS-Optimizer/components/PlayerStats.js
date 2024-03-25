@@ -1,12 +1,11 @@
 const PlayerStats = ({ last5, last10, sznAvg, vsOpponent }) => {
   
   const determineStyle = (value) => {
-    // Check if the value is null first
     if (value === null) {
       return {
         backgroundColor: '#222431',
         color: '#d3d3d3',
-        borderTop: '2px solid transparent', // Use transparent border for null values or consider using #444444 if needed
+        borderTop: '2px solid transparent',
       };
     }
 
@@ -16,7 +15,7 @@ const PlayerStats = ({ last5, last10, sznAvg, vsOpponent }) => {
     if (numValue > 20 && numValue < 80) {
       bgColor = '#222431'; 
       txtColor = '#d3d3d3';
-      borderColor = 'transparent'; // Was '#transparent' before, corrected to 'transparent'
+      borderColor = 'transparent'; 
     } else if (numValue > 50) {
       bgColor = '#6ae487'; 
       txtColor = '#1a472a'; 
