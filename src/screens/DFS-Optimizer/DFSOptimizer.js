@@ -50,7 +50,7 @@ export default function BasicTable() {
                 </div>
               </div>
               {shouldRenderPlayerStats(player) && (
-                <div className="bg-transparent text-white max-w-[375px]">
+                <div className="bg-transparent text-white p-0 m-0">
                   <PlayerStats 
                     last5={player.last_5}
                     last10={player.last_10}
