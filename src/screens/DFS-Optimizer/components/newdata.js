@@ -32,7 +32,7 @@ export const playersData = [
     },
     {
       name: 'Andrew Wiggins',
-      playerImage: Wiggins, //Please look at the gamesData file and restructure this to make sure it will work when we incorperate out new backend
+      playerImage: Wiggins, 
       teamInfo: 'NBA / GSW ',
       matchup: 'OKC @ ORL - 3/22 10:10 PM ET',
       betType: 'REBOUNDS',
@@ -77,7 +77,8 @@ export const playersData = [
         { platform: BetMGM, line: 9.5, odds: '+100' },
         { platform: Pinnacle, line: 9.5, odds: '-102' },
         { platform: Barstool, line: '-', odds: '-' },
-        
+        { platform: Pinnacle, line: 9.5, odds: '-102' },
+        { platform: Pinnacle, line: 9.5, odds: '-102' },
       ],
       best_platform:PrizPicksLogo,
       last_5:null,
