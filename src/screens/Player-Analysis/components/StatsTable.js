@@ -67,7 +67,7 @@ const StatsTable = ({ player, sport }) => {
           }
         `}
       </style>
-      <div className="stats-table-wrapper">
+      <div className="stats-table-wrapper border-t bg-[#1f232a]">
         <table className="stats-table min-w-full table-fixed text-center no-vertical-borders">
           <thead>
             <tr>
