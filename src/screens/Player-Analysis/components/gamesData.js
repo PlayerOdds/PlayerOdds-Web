@@ -10,7 +10,7 @@ export const games = [
     league: 'NBA',
     todays_games:[
       { 
-      id: 'game1',
+      id: '0',
       title: 'Miami Heat at Cleveland Cavaliers',
       teamInfo: 'NBA / MIA ',
       home: CLE,

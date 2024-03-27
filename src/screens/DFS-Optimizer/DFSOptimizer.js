@@ -36,7 +36,7 @@ export default function BasicTable() {
               <div className="bg-[#181a24ab] p-3 text-white max-w-[1300px]">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-1 items-center">
                   <div className="flex flex-col mb-2 items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
-                    <PlayerInfo playerImage={player.playerImage} name={player.name} teamInfo={player.teamInfo} matchup={player.matchup} matchupDate={player.matchupDate}/>
+                    <PlayerInfo playerImage={player.playerImage} name={player.name} teamInfo={player.teamInfo} matchupHome={player.matchupHome} matchupAway={player.matchupAway} matchupDate={player.matchupDate}/>
                   </div>
                   <div className="text-center flex flex-row items-center justify-between sm:space-x-1 p-1 col-span-1 md:col-span-3 lg:col-span-2 overflow-x-auto"> {/* Add overflow-x-auto for horizontal scrolling */}
                     <PlayerLine line={player.line} betType={player.betType}/>
